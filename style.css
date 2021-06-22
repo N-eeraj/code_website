@@ -18,6 +18,7 @@ nav{
     align-items: center;
     background: linear-gradient(60deg, rgb(25,0,75), rgb(55,0,55));
     box-shadow: 0 1px 15px 1vh rgba(25,0,55,0.7);
+    z-index: 2;
 }
 .dark-nav{
     background: linear-gradient(60deg, rgb(125,55,175), rgb(155,55,155));
@@ -30,6 +31,7 @@ nav h1{
 #dark-btn{
     width: 5vh;
     height: 5vh;
+    cursor: pointer;
 }
 
 #carousel-section{
@@ -100,20 +102,106 @@ nav h1{
     box-shadow: 0 0 15px #0007;
 }
 
-.program-card img{
-    width: 40%;
-}
+.program-card img{width: 30%;}
 .program-card div{
-    width: 45%;
+    width: 55%;
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
-    font-size: 2.4vh;
+    font-size: 2.25vh;
 }
 .program-description{
     height: 60%;
+    padding: 1% 0;
     font-size: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
 }
+
+#top{
+    width: 5vw;
+    height: 5vw;
+    position: fixed;
+    right: 5vh;
+    bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,125,255);
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: 0.5s;
+}#top:hover{opacity: 1;}
+#top img{width: 50%;}
+
+@media screen and (orientation: landscape)
+{
+    nav{padding: 2.5vw 5vw;}
+    nav h1{font-size: 3vw;}
+    #dark-btn{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    #carousel-section{
+        width: 60vw;
+        height: 60vh;
+        margin-top: 28vh;
+    }
+    .slide h2{font-size: 2.75vw;}
+    .slide p{
+        width: 60%;
+        font-size: 2vw;
+    }
+    
+    #cards-section{
+        margin-top: 12vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        /* padding: 3vh 3vw; */
+    }
+
+    .program-card{
+        width: 25vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        /* padding: 2.5% 0;
+        justify-content: space-around;
+        border-radius: 8px; */
+    }
+
+    .program-card img{width: 80%;}
+    .program-card div{
+        width: 80%;
+        height: 40%;
+    }
+    .program-name{
+        font-size: 2.25vw;
+        text-align: center;
+    }
+    .program-description{
+        width: 100%;
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    nav{padding: 1vw 5vw;}
+    nav h1{font-size: 2.4vw;}
+    #dark-btn{
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+::-webkit-scrollbar{width: 10px;}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(125, 0, 255);
+    border-radius: 30px;
+}  
+::-webkit-scrollbar-thumb:hover{background-color: rgb(155, 0, 155);}
