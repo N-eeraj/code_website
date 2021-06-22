@@ -29,7 +29,7 @@ function toggle()
         darkBtn.setAttribute('src', "Images/sun.png");
         changeColor(languageNames, 'white');
         changeColor(languageDescription, 'white');
-        cardSection.style.background = "linear-gradient(135deg, rgb(125,55,175), rgb(155,55,155))";
+        cardSection.style.background = "linear-gradient(135deg, rgb(0,125,255), rgb(55,155,255))";
         changeColor(programNames, 'white');
         changeColor(programDescription, 'white');
 
@@ -45,7 +45,7 @@ function toggle()
         darkBtn.setAttribute('src', "Images/moon.png");
         changeColor(languageNames, 'black');
         changeColor(languageDescription, 'black');
-        cardSection.style.background = "linear-gradient(135deg, rgb(25,0,75), rgb(55,0,55))";
+        cardSection.style.background = "linear-gradient(135deg, rgb(0,125,255), rgb(55,0,55))";
         changeColor(programNames, 'black');
         changeColor(programDescription, 'black');
         
