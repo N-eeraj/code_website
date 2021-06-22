@@ -1,0 +1,23 @@
+#details{
+    height: 20vh;
+    margin-top: 15vh;
+    border: 1px solid black;
+}
+
+#languages{
+    height: 15vh;
+    margin-top: 5vh;
+    border: 1px solid black;
+}
+
+#code{
+    margin: 5vh 2vw;
+    padding: 3vh;
+    background-color: black;
+}
+
+#download{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
