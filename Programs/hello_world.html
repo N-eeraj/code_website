@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head id="hello_world">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,17 +22,18 @@
     </section>
 
     <div id="languages">
-        <img src="../Images/Language_Icons/javascript.png" alt="" class="language-btn">
-        <img src="../Images/Language_Icons/python.png" alt="" class="language-btn">
-        <img src="../Images/Language_Icons/c.png" alt="" class="language-btn">
-        <img src="../Images/Language_Icons/cpp.png" alt="" class="language-btn">
-        <img src="../Images/Language_Icons/java.png" alt="" class="language-btn">
+        <img src="../Images/Language_Icons/javascript.png" alt="JavaScript Logo" id="js" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/python.png" alt="Python Logo" id="py" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/c.png" alt="C Logo" id="c" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/cpp.png" alt="C++ Logo" id="cpp" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/java.png" alt="Java Logo" id="java" class="language-btn" onclick="selectLang(this.id)">
     </div>
 
     <pre id="code"></pre>
 
-    <a href="" id="download" download="">Download Code</a>
+    <a href="" id="download" download>Download Code</a>
 
 </body>
+<script src="../Scripts/hello_world_script.js"></script>
 <script src="../page_script.js"></script>
 </html>

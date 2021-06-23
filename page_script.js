@@ -1,9 +1,14 @@
 let darkMode = false;
 
+const programName = document.head.id;
+
 const navBar = document.getElementsByTagName("nav")[0];
 const darkBtn = document.getElementById("dark-btn");
 const description = document.getElementById("details");
 const terminal = document.getElementById("code");
+const download = document.getElementById("download");
+
+const languages = document.getElementsByClassName("language-btn");
 
 
 function toggle()
@@ -26,3 +31,19 @@ function toggle()
         terminal.style.backgroundColor = "#111";
     }
 }
+
+function selectLang(lang)
+{
+    path = '../Code/' + lang + '/' + programName +'.' + lang;
+    for (i=0; i<languages.length; i++)
+    {
+        languages[i].style.filter = 'grayscale(100%)';
+    }
+    document.getElementById(lang).style.filter = 'grayscale(0)';
+
+    changeCode(lang);
+
+    download.href = path;
+}
+
+selectLang('c');

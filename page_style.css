@@ -15,7 +15,7 @@
     filter: grayscale(100%);
     transition: 0.25s;
 }
-.language-btn:hover{filter: grayscale(50%);}
+.language-btn:hover{transform: scale(1.1);}
 
 #code{
     margin: 5vh 2vw;
@@ -23,6 +23,7 @@
     background-color: #111;
     color: white;
     font-size: 2vh;
+    line-height: 3vh;
     overflow-x: scroll;
 }
 
@@ -70,6 +71,7 @@
         margin: 15vh auto;
         padding: 3vw 4vw;
         font-size: 4vh;
+        line-height: 5vh;
     }
     
     #download{
@@ -87,7 +89,10 @@
         font-size: 3.2vh;
     }
 
-    #code{font-size: 3vh;}
+    #code{
+        font-size: 3vh;
+        line-height: 4vh;
+    }
     
     #download{padding: 3.6vh;}
 }
