@@ -1,9 +1,5 @@
-let darkMode = false;
-
 const programName = document.head.id;
 
-const navBar = document.getElementsByTagName("nav")[0];
-const darkBtn = document.getElementById("dark-btn");
 const description = document.getElementById("details");
 const terminal = document.getElementById("code");
 const download = document.getElementById("download");
@@ -46,4 +42,5 @@ function selectLang(lang)
     download.href = path;
 }
 
+toggle()
 selectLang('c');
