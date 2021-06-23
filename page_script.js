@@ -1,5 +1,7 @@
 const programName = document.head.id;
 
+const navBar = document.getElementsByTagName("nav")[0];
+const darkBtn = document.getElementById("dark-btn");
 const description = document.getElementById("details");
 const terminal = document.getElementById("code");
 const download = document.getElementById("download");
@@ -26,6 +28,7 @@ function toggle()
         description.style.color = 'black';
         terminal.style.backgroundColor = "#111";
     }
+    localStorage.setItem('mode', String(darkMode))
 }
 
 function selectLang(lang)
@@ -42,5 +45,14 @@ function selectLang(lang)
     download.href = path;
 }
 
-toggle()
 selectLang('c');
+
+;
+
+if (localStorage.getItem('mode') == "true")
+{
+    darkMode = false;
+    toggle()
+}
+else
+    darkMode = false;
