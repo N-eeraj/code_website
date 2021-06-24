@@ -4,14 +4,14 @@ class Main
 {
     public static void main(String[] args)
     {
-        float sum = 0;
+        float product = 1;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter First Number: ");
-        sum += scanner.nextFloat();
+        product *= scanner.nextFloat();
         System.out.println("Enter Second Number: ");
-        sum += scanner.nextFloat();
-        System.out.println(sum);
+        product *= scanner.nextFloat();
+        System.out.println(product);
 
         scanner.close();
     }
