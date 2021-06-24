@@ -140,6 +140,8 @@ class Main
     System.out.println("Enter Second Number: ");
     sum += scanner.nextFloat();
     System.out.println(sum);
+
+    scanner.close();
   }
 }`
 }
