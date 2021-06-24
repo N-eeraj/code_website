@@ -37,17 +37,17 @@ function selectLang(lang)
     for (i=0; i<languages.length; i++)
     {
         languages[i].style.filter = 'grayscale(100%)';
+        languages[i].classList.remove('shrink');
     }
     document.getElementById(lang).style.filter = 'grayscale(0)';
+    document.getElementById(lang).className += ' shrink';
 
-    changeCode(lang);
-
+    try{changeCode(localStorage.getItem('programScript'), lang)}
+    catch{console.log('default')}
     download.href = path;
 }
 
 selectLang('c');
-
-;
 
 if (localStorage.getItem('mode') == "true")
 {

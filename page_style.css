@@ -14,8 +14,15 @@
     width: 15%;
     filter: grayscale(100%);
     transition: 0.25s;
+    cursor: pointer;
 }
 .language-btn:hover{transform: scale(1.1);}
+
+.shrink{
+    animation: shrink 5s infinite;
+}
+@keyframes shrink
+{50%{transform: scale(1.2);}}
 
 #code{
     margin: 5vh 2vw;
@@ -57,9 +64,9 @@
 @media screen and (orientation: landscape)
 {
     #details{
-        width: 60vw;
+        width: 65vw;
         margin: 25vh auto 12vh auto;
-        font-size: 4vh;
+        font-size: 2.8vw;
     }
     
     .language-btn{
@@ -70,18 +77,18 @@
         width: 80%;
         margin: 15vh auto;
         padding: 3vw 4vw;
-        font-size: 4vh;
-        line-height: 5vh;
+        font-size: 3vw;
+        line-height: 4vw;
     }
     
     #download{
-        margin: 5vh 30% 15vh 30%;
-        padding: 4vh;
+        margin: 5vh 35% 15vh 35%;
+        padding: 4vh 0;
         font-size: 5vh;
     }
 }
 
-@media screen and (orientation: landscape) and (min-width: 720px)
+@media screen and (orientation: landscape) and (min-width: 1024px)
 {
     #details{
         width: 72vw;
