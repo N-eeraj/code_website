@@ -208,6 +208,77 @@ class Main
     scanner.close();
   }
 }`
+},
+
+
+"division":
+{
+'js':
+`let num1 = prompt("Enter Dividend");
+let num2 = prompt("Enter Divisor");
+
+console.log("Quotient: " + Math.floor(num1 / num2));
+console.log("Remainder: " + num1 % num2);`,
+
+'py':
+`num1 = float(input("Enter Dividend: "))
+num2 = float(input("Enter Divisor: "))
+
+print("Quotient:", num1 // num2)
+print("Divisor", num1 % num2)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num1, num2;
+
+  printf("Enter Dividend: ");
+  scanf("%d", &num1);
+  printf("Enter Divisor: ");
+  scanf("%d", &num2);
+
+  printf("Quotient: %d\\n", num1 / num2);
+  printf("Remainder: %d", num1 % num2);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num1, num2;
+
+  cout << "Enter Dividend: ";
+  cin >> num1;
+  cout << "Enter Divisor: ";
+  cin >> num2;
+
+  cout << "Quotient: " << num1 / num2;
+  cout << "'\\n'Remainder: " << num1 % num2;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    int num1, num2;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Dividend: ");
+    num1 = scanner.nextInt();
+    System.out.println("Enter Divisor: ");
+    num2 = scanner.nextInt();
+
+    System.out.println("Quotient: " + num1 / num2);
+    System.out.println("Remainder: " + num1 % num2);
+
+    scanner.close()
+  }
+}`
 }
 
 }
