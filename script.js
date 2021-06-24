@@ -74,9 +74,4 @@ else
     darkMode = false;
 }
 
-function selectProgram(program)
-{
-    localStorage.setItem('programScript', program);
-}
-
 localStorage.removeItem('programScript')

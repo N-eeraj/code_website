@@ -1,4 +1,6 @@
-const programName = document.head.id;
+let url = location.href.slice(location.href.indexOf('Programs'));
+let relUrl = url.slice(9);
+let programName = relUrl.slice(0, relUrl.length-5);
 
 const navBar = document.getElementsByTagName("nav")[0];
 const darkBtn = document.getElementById("dark-btn");
@@ -42,7 +44,7 @@ function selectLang(lang)
     document.getElementById(lang).style.filter = 'grayscale(0)';
     document.getElementById(lang).className += ' shrink';
 
-    try{changeCode(localStorage.getItem('programScript'), lang)}
+    try{changeCode(lang)}
     catch{console.log('default')}
     download.href = path;
 }
