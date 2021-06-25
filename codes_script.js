@@ -566,6 +566,73 @@ class Main
 },
 
 
+"odd_even":
+{
+'js':
+`if(prompt("Enter Numebr") % 2 == 0)
+  console.log("Even");
+else
+  console.log("Odd");`,
+
+'py':
+`if int(input("Enter Number: ")) %2 == 0:
+  print("Even")
+else:
+  print("Odd")`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  if (num % 2 == 0)
+    printf("Even");
+  else
+    printf("Odd");
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  if (num % 2 == 0)
+    cout << "Even";
+  else
+    cout << "Odd";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    if (scanner.nextInt() % 2 == 0)
+      System.out.println("Even");
+    else
+      System.out.println("Odd");
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
