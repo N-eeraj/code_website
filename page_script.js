@@ -49,6 +49,12 @@ function selectLang(lang)
     download.href = path;
 }
 
+document.getElementById('languages').innerHTML =
+        `<img src="../Images/Language_Icons/javascript.png" alt="JavaScript Logo" id="js" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/python.png" alt="Python Logo" id="py" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/c.png" alt="C Logo" id="c" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/cpp.png" alt="C++ Logo" id="cpp" class="language-btn" onclick="selectLang(this.id)">
+        <img src="../Images/Language_Icons/java.png" alt="Java Logo" id="java" class="language-btn" onclick="selectLang(this.id)">`
 
 selectLang('c');
 
