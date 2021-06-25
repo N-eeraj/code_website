@@ -288,17 +288,17 @@ class Main
 `let input1 = prompt("Enter First Input");
 let input2 = prompt("Enter Second Input");
 
-console.log("Before Swapping\nInput 1: " + input1 + ", Input 2: " + input2);
+console.log("Before Swapping\\nInput 1: " + input1 + ", Input 2: " + input2);
 [input1, input2] = [input2, input1];
-console.log("After Swapping\nInput 1: " + input1 + ", Input 2: " + input2);`,
+console.log("After Swapping\\nInput 1: " + input1 + ", Input 2: " + input2);`,
 
 'py':
 `input1 = input("Enter First Input: ")
 input2 = input("Enter Second Input: ")
 
-print("Before Swapping\nInput 1:", input1 + ", Input 2:", input2)
+print("Before Swapping\\nInput 1:", input1 + ", Input 2:", input2)
 input1, input2 = input2, input1;
-print("After Swapping\nInput 1:", input1 + ", Input 2:", input2)`,
+print("After Swapping\\nInput 1:", input1 + ", Input 2:", input2)`,
 
 'c':
 `#include<stdio.h>
@@ -362,7 +362,98 @@ class Main
     scanner.close();
   }
 }`
-}
+},
+
+
+"rectangle":
+{
+'js':
+`let length = Number(prompt("Enter Length"));
+let width = Number(prompt("Enter Width"));
+
+console.log("Area: " + length * width);
+console.log("Perimeter: " + 2 * (length + width));`,
+
+'py':
+`length = float(input("Enter Length: "))
+width = float(input("Enter Width: "))
+
+print("Area: ", length * width)
+print("Perimeter: ", 2 * (length + width))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  float length, width;
+
+  printf("Enter Length: ");
+  scanf("%f", &length);
+  printf("Enter Width: ");
+  scanf("%f", &width);
+
+  printf("Area: %f", length * width);
+  printf("\\nPerimeter: %f", 2 * (length + width));
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  float length, width;
+
+  cout << "Enter Length: ";
+  cin >> length;
+  cout << "Enter Width: ";
+  cin >> width;
+
+  cout << "Area: " << length * width;
+  cout << "\\nPerimeter: "<< 2 * (length + width);
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    float length, width;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Length: ");
+    length = scanner.nextFloat();
+    System.out.println("Enter Width: ");
+    width = scanner.nextFloat();
+
+    System.out.println("Area: " + length * width);
+    System.out.println("Perimeter: " + 2 * (length + width));
+
+    scanner.close();
+  }
+}`
+},
+
+
+// "programName":
+// {
+// 'js':
+// ``,
+
+// 'py':
+// ``,
+
+// 'c':
+// ``,
+
+// 'cpp':
+// ``,
+
+// 'java':
+// ``
+// }
 
 }
 
