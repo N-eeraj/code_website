@@ -633,6 +633,58 @@ class Main
 },
 
 
+"ascii":
+{
+'js':
+`console.log(prompt("Enter Character").charCodeAt());`,
+
+'py':
+`print(ord(input("Enter Character: ")))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+    char character;
+
+    printf("Enter Character: ");
+    scanf("%c", &character);
+
+    printf("%d", character);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  char character;
+
+  cout << "Enter Character: ";
+  cin >> character;
+
+  cout << int(character);
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Character: ");
+    System.out.println((int) scanner.next().charAt(0));
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
