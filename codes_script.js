@@ -501,6 +501,71 @@ class Main
 },
 
 
+"cube":
+{
+'js':
+`let edge = Number(prompt("Enter Edge"));
+
+console.log("Volume: " + edge ** 3);
+console.log("Surface Area: " + 6 * edge ** 2);`,
+
+'py':
+`edge = float(input("Enter edge: "))
+
+print("Volume:", edge ** 3)
+print("Surface Area:", 6 * edge ** 2)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  float edge;
+
+  printf("Enter Edge: ");
+  scanf("%f", &edge);
+
+  printf("Volume: %f", pow(edge, 3));
+  printf("\\nSurface Area: %f", 6 * pow(edge, 2));
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+  float edge;
+
+  cout << "Enter Edge: ";
+  cin >> edge;
+
+  cout << "Volume: " << pow(edge, 3);
+  cout << "\\nSurface Area: " << 6 * pow(edge, 2);
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    float edge;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Edge: ");
+    edge = scanner.nextFloat();
+
+    System.out.println("Volume: " + Math.pow(edge, 3));
+    System.out.println("Surface Area: " + 6 * Math.pow(edge, 2));
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
