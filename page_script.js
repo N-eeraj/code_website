@@ -49,6 +49,7 @@ function selectLang(lang)
     download.href = path;
 }
 
+
 selectLang('c');
 
 if (localStorage.getItem('mode') == "true")

@@ -437,6 +437,70 @@ class Main
 },
 
 
+"circle":
+{
+'js':
+`let radius = Number(prompt("Enter Radius"));
+
+console.log("Area: " + 3.14 * radius ** 2);
+console.log("Circumference: " + 6.28 * radius);`,
+
+'py':
+`radius = float(input("Enter Radius: "))
+
+print("Area:", 3.14 * radius ** 2)
+print("Circumference:", 6.28 * radius)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  float radius;
+
+  printf("Enter Radius: ");
+  scanf("%f", &radius);
+
+  printf("Area: %f", 3.14 * radius * radius);
+  printf("\\nCircumference : %f", 6.28 * radius);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  float radius;
+
+  cout << "Enter radius: ";
+  cin >> radius;
+
+  cout << "Area: " << 3.14 * radius * radius;
+  cout << "\\nCircumference: "<< 6.28 * radius;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    float radius;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Radius: ");
+    radius = scanner.nextFloat();
+
+    System.out.println("Area: " + 3.14 * radius * radius);
+    System.out.println("Circumference: " + 6.28 * radius);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
