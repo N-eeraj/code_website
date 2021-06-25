@@ -15,6 +15,6 @@ class Main
         System.out.println("Quotient: " + num1 / num2);
         System.out.println("Remainder: " + num1 % num2);
 
-        scanner.close()
+        scanner.close();
     }
 }

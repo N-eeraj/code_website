@@ -276,7 +276,90 @@ class Main
     System.out.println("Quotient: " + num1 / num2);
     System.out.println("Remainder: " + num1 % num2);
 
-    scanner.close()
+    scanner.close();
+  }
+}`
+},
+
+
+"swap":
+{
+'js':
+`let input1 = prompt("Enter First Input");
+let input2 = prompt("Enter Second Input");
+
+console.log("Before Swapping\nInput 1: " + input1 + ", Input 2: " + input2);
+[input1, input2] = [input2, input1];
+console.log("After Swapping\nInput 1: " + input1 + ", Input 2: " + input2);`,
+
+'py':
+`input1 = input("Enter First Input: ")
+input2 = input("Enter Second Input: ")
+
+print("Before Swapping\nInput 1:", input1 + ", Input 2:", input2)
+input1, input2 = input2, input1;
+print("After Swapping\nInput 1:", input1 + ", Input 2:", input2)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int input1, input2, temp;
+
+  printf("Enter First Input: ");
+  scanf("%d", &input1);
+  printf("Enter Second Input: ");
+  scanf("%d", &input2);
+
+  printf("Before Swapping\\nInput 1: %d, Input 2: %d", input1, input2);
+  temp = input1;
+  input1 = input2;
+  input2 = temp;
+  printf("\\nAfter Swapping\\nInput 1: %d, Input 2: %d", input1, input2);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int input1, input2, temp;
+
+  cout << "Enter First Input: ";
+  cin >> input1;
+  cout << "Enter Second Input: ";
+  cin >> input2;
+  
+  cout << "Before Swapping\\nInput 1: " << input1 << ", Input 2: " << input2;
+  temp = input1;
+  input1 = input2;
+  input2 = temp;
+  cout << "\\nAfter Swapping\\nInput 1: " << input1 << ", Input 2: " << input2;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    String input1, input2, temp;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter First Input: ");
+    input1 = scanner.nextLine();
+    System.out.println("Enter Second Input: ");
+    input2 = scanner.nextLine();
+
+    System.out.println("Before Swapping\\nInput 1: " + input1 + ", Input 2: "+ input2);
+    temp = input1;
+    input1 = input2;
+    input2 = temp;
+    System.out.println("After Swapping\\nInput 1: " + input1 + ", Input 2: "+ input2);
+
+    scanner.close();
   }
 }`
 }
