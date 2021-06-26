@@ -865,6 +865,89 @@ class Largest
 },
 
 
+"sign":
+{
+'js':
+`num = Number(prompt("Enter Number"));
+
+if (num < 0)
+  console.log("Negative");
+else if (num > 0)
+  console.log("Positive")
+else
+  console.log("Zero")`,
+
+'py':
+`num = float(input("Enter Number: "))
+
+if num < 0:
+    print("Negative")
+elif num > 0:
+    print("Positive")
+else:
+    print("Zero")`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  float num;
+
+  printf("Enter Number: ");
+  scanf("%f", &num);
+
+  if (num < 0)
+    printf("Negative");
+  else if (num > 0)
+    printf("Positive");
+  else
+    printf("Zero");
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  float num;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  if (num < 0)
+    cout << "Negative";
+  else if (num > 0)
+    cout << "Positive";
+  else
+    cout << "Zero";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Sign
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    float num = scanner.nextFloat();
+
+    if (num < 0)
+      System.out.println("Negative");
+    else if (num > 0)
+      System.out.println("Positive");
+    else
+      System.out.println("Zero");
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
