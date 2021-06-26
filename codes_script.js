@@ -685,6 +685,93 @@ class Main
 },
 
 
+"vowel":
+{
+'js':
+`let alphabet = prompt("Enter Alphabet").toUpperCase();
+
+if ("AEIOU".search(alphabet) == -1)
+  console.log(alphabet + " is a Consonant");
+else
+  console.log(alphabet + " is a Vowel");`,
+
+'py':
+`alphabet = input("Enter Alphabet: ").upper()
+
+if alphabet in 'AEIOU':
+  print(alphabet, "is a Vowel")
+else:
+  print(alphabet, "is a Consonant")`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  char alphabet, vowels[5] = {'A', 'E', 'I', 'O', 'U'}, result[9] = "Consonant";
+  int i;
+
+  printf("Enter Alphabet: ");
+  scanf("%c", &alphabet);
+
+  alphabet = toupper(alphabet);
+  for (i = 0; i < 5; i++)
+  {
+    if (alphabet == vowels[i])
+    {
+      strcpy(result, "Vowel");
+      break;
+    }
+  }
+  printf("%c is a %s", alphabet , result);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  char alphabet, vowels[5] = {'A', 'E', 'I', 'O', 'U'};
+  string result = "Consonant";
+  int i;
+
+  cout << "Enter Alphabet: ";
+  cin >> alphabet;
+
+  alphabet = toupper(alphabet);
+  for (i = 0; i < 5; i++)
+  {
+    if (alphabet == vowels[i])
+    {
+      result.replace(0, 10,"Vowel");
+      break;
+    }
+  }
+  cout << alphabet << " is a " << result;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Alphabet: ");
+    String alphabet =  scanner.next().toUpperCase();
+    if ("AEIOU".contains(alphabet))
+      System.out.println(alphabet + " is a Vowel");
+    else
+      System.out.println(alphabet + " is a Consonant");
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
