@@ -25,7 +25,7 @@ int main()
 }`,
 
 'java':
-`class Main
+`class HelloWorld
 {
   public static void main(String[] args)
   {
@@ -68,7 +68,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Input
 {
   public static void main(String[] args)
   {
@@ -128,7 +128,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Addition
 {
   public static void main(String[] args)
   {
@@ -192,7 +192,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Multiplication
 {
   public static void main(String[] args)
   {
@@ -261,7 +261,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Division
 {
   public static void main(String[] args)
   {
@@ -341,7 +341,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Swap
 {
   public static void main(String[] args)
   {
@@ -416,7 +416,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Rectangle
 {
   public static void main(String[] args)
   {
@@ -482,7 +482,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Circle
 {
   public static void main(String[] args)
   {
@@ -547,7 +547,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Cube
 {
   public static void main(String[] args)
   {
@@ -615,7 +615,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class OddEven
 {
   public static void main(String[] args)
   {
@@ -670,7 +670,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-class Main
+class Ascii
 {
   public static void main(String[] args)
   {
@@ -753,7 +753,7 @@ int main()
 'java':
 `import java.util.Scanner;
 
-public class Main
+class Vowel
 {
   public static void main(String[] args)
   {
