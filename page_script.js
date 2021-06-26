@@ -1,6 +1,6 @@
 let url = location.href.slice(location.href.indexOf('Programs'));
 let relUrl = url.slice(9);
-let programName = relUrl.slice(0, relUrl.length-5);
+let programName = relUrl.slice(0, -5);
 
 const navBar = document.getElementsByTagName("nav")[0];
 const darkBtn = document.getElementById("dark-btn");

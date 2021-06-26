@@ -772,6 +772,99 @@ class Vowel
 },
 
 
+"largest":
+{
+'js':
+`let limit = Number(prompt("Enter Limit"));
+
+for(i = 0; i < limit; i++)
+{
+  let  input = prompt("Enter Input");
+  if (i == 0 || largest < input)
+    largest = input;
+}
+
+console.log(largest)`,
+
+'py':
+`for i in range(int(input("Enter Limit: "))):
+num = float(input("Enter Input: "))
+if i == 0 or largest < num:
+    largest = num
+
+print(largest)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int limit, i;
+  float input, largest;
+
+  printf("Enter Limit: ");
+  scanf("%d", &limit);
+  for(i = 0; i < limit; i++)
+  {
+    printf("Enter Input: ");
+    scanf("%f", &input);
+    if (i == 0 || largest < input)
+      largest = input;
+  }
+
+  printf("%f", largest);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int limit, i;
+  float input, largest;
+
+  cout << "Enter Limit: ";
+  cin >> limit;
+  for(i = 0; i < limit; i++)
+  {
+    cout << "Enter Input: ";
+    cin >> input;
+    if (i == 0 || largest < input)
+      largest = input;
+  }
+    
+  cout << largest;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Largest
+{
+  public static void main(String[] args)
+  {
+    int limit, i;
+    float input, largest = -999999999;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Limit: ");
+    limit = scanner.nextInt();
+    for (i = 0; i < limit; i++)
+    {
+      System.out.println("Enter Input: ");
+      input = scanner.nextFloat();
+      if (i == 0 || largest < input)
+        largest = input;
+    }
+
+    System.out.println(largest);
+
+    scanner.close();
+    \}
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
