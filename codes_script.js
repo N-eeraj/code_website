@@ -1019,6 +1019,78 @@ class Digit
 },
 
 
+"leap_year":
+{
+'js':
+`let year = prompt("Enter Year");
+
+if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+  console.log("Leap Year");
+else
+  console.log("Not Leap Year");`,
+
+'py':
+`year = int(input("Enter Year: "))
+
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+  print("Leap Year")
+else:
+  print("Not Leap Year")`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int year;
+
+  printf("Enter Year: ");
+  scanf("%d", &year);
+
+  if (year % 4 == 0  && year % 100 != 0 || year % 400 == 0)
+    printf("Leap Year");
+  else
+    printf("Not Leap Year");
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int year;
+
+  cout << "Enter Year: ";
+  cin >> year;
+
+  if (year % 4 == 0  && year % 100 != 0 || year % 400 == 0)
+    cout << "Leap Year";
+  else
+    cout << "Not Leap Year";
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class LeapYear
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Year: ");
+    int year = scanner.nextInt();
+
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+      System.out.println("Leap Year");
+    else
+      System.out.println("Not Leap Year");
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
