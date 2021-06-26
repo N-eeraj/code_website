@@ -948,6 +948,77 @@ class Sign
 },
 
 
+"is_digit":
+{
+'js':
+`if (isNaN(prompt("Enter Input")))
+console.log("Is not Digit");
+else
+console.log("Is Digit");`,
+
+'py':
+`if input("Enter Input: ").isdigit():
+print("Is Digit")
+else:
+print("Is not Digit")
+`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  char input;
+
+  printf("Enter Input: ");
+  input = getchar();
+
+  if (isdigit(input))
+    printf("Is Digit");
+  else
+    printf("Is not Digit");
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  char input;
+
+  cout << "Enter Input: ";
+  cin >> input;
+
+  if (isdigit(input) != 0)
+    cout << "Is Digit";
+  else
+    cout << "Is not Digit";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Digit
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Input: ");
+    try
+    {
+      Float.parseFloat(scanner.next());
+      System.out.println("Is Digit");
+    }
+    catch(NumberFormatException e)
+      {System.out.println("Is not Digit");}
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
