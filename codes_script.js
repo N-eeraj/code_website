@@ -1441,6 +1441,59 @@ class Fibonacci
 },
 
 
+"string_length":
+{
+'js':
+`console.log(prompt("Enter Input").length);`,
+
+'py':
+`print(len(input("Enter Input: ")))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  char input[25];
+
+  printf("Enter Input: ");
+  gets(input);
+
+  printf("%d", strlen(input));
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+  char input[25];
+
+  cout << "Enter Input: ";
+  cin.getline(input, 25);
+
+  cout << strlen(input);
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class StringLength
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Input: ");
+    System.out.println(scanner.nextLine().length());
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
