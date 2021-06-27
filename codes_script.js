@@ -1091,6 +1091,87 @@ class LeapYear
 },
 
 
+"sum_average":
+{
+'js':
+`let limit = prompt("Enter Limit");
+let sum = 0;
+
+for (i = 1; i <= limit; i++)
+  sum += i;
+
+console.log("Sum: ", sum);
+console.log("Average: ", sum / limit);`,
+
+'py':
+`limit = int(input("Enter Limit: "))
+sum = 0
+
+for i in range(1, limit+1):
+  sum += i
+
+print("Sum:", sum)
+print("Average:", sum / limit)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int limit, sum = 0, i;
+
+  printf("Enter Limit: ");
+  scanf("%d", &limit);
+
+  for (i = 1; i <= limit; i++)
+    sum += i;
+
+  printf("Sum: %d\\n", sum);
+  printf("Average: %f", sum * 1.0 / limit);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int limit, sum = 0, i;
+
+  cout << "Enter Limit: ";
+  cin >> limit;
+
+  for (i = 1; i <= limit; i++)
+    sum += i;
+
+  cout << "Sum: " << sum;
+  cout << "\\nAverage: " << sum * 1.0 / limit;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class SumAverage
+{
+  public static void main(String[] args)
+  {
+    int limit, sum = 0, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Limit: ");
+    limit = scanner.nextInt();
+
+    for (i = 0; i <= limit; i++)
+      sum += i;
+
+    System.out.println("Sum: " + sum);
+    System.out.println("Average: " + sum * 1.0 / limit);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
