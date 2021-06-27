@@ -1172,6 +1172,114 @@ class SumAverage
 },
 
 
+"factorial":
+{
+'js':
+`function fact(num)
+{
+  let factorial = 1;
+
+  if (num == 1)
+    return 1;
+   factorial = num * fact(num - 1);
+
+  return factorial;
+}
+
+console.log(fact(prompt("Enter Input")));`,
+
+'py':
+`def fact(num):
+factorial = 1
+
+if num == 1:
+  return 1
+factorial = num * fact(num - 1)
+
+return factorial
+
+print(fact(int(input("Enter Input: "))))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int input;
+
+  printf("Enter Input: ");
+  scanf("%d", &input);
+
+  printf("%d", fact(input));
+}
+
+int fact(num)
+{
+  int factorial = 1;
+
+  if (num == 1)
+    return 1;
+  factorial = num * fact(num - 1);
+
+  return factorial;
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+
+int fact(int num)
+{
+  int factorial = 1;
+
+  if (num == 1)
+    return 1;
+  factorial = num * fact(num - 1);
+
+  return factorial;
+}
+
+int main()
+{
+  int input;
+
+  cout << "Enter Input: ";
+  cin >> input;
+
+  cout << fact(input);
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Factorial
+{
+  public static int fact(int num)
+  {
+    int factorial = 1;
+
+    if (num == 1)
+      return 1;
+    factorial = num * fact(num - 1);
+
+    return factorial;
+  }
+    
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Input: ");
+    int input = scanner.nextInt();
+
+    System.out.println(fact(input));
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
