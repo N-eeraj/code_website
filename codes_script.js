@@ -1280,6 +1280,70 @@ class Factorial
 },
 
 
+"multiplication_table":
+{
+'js':
+`num = prompt("Enter Number: ");
+
+for (i = 1; i < 11; i++)
+  console.log(num + " x " + i + " = " + num * i);`,
+
+'py':
+`num = int(input("Enter Number: "))
+
+for i in range(1, 11):
+  print(num, 'x', i, '=', num * i)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, i;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  for (i = 1; i < 11; i++)
+    printf("%d x %d = %d\\n", num, i, num * i);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num, i;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  for (i = 1; i < 11; i++)
+      cout << num << " x " << i << " = " << num * i <<"\\n";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class MultiplicationTable
+{
+  public static void main(String[] args)
+  {
+    int num, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    num = scanner.nextInt();
+
+    for (i = 1; i < 11; i++)
+      System.out.println(num + " x " + i + " = " + num * i);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
