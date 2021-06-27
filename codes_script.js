@@ -1494,6 +1494,68 @@ class StringLength
 },
 
 
+"number_length":
+{
+'js':
+`console.log(Number(prompt("Enter Number")).toString().length);`,
+
+'py':
+`print(len(str(int(input("Enter Number: ")))))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, length = 1;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  while (num / 10 != 0)
+  {
+    num /= 10;
+    length++;
+  }
+  printf("%d", length);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num, length = 1;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  while (num / 10 != 0)
+  {
+    num /= 10;
+    length++;
+  }
+  cout << length;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class NumberLength
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    System.out.println(Integer.toString(scanner.nextInt()).length());
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
