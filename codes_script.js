@@ -860,7 +860,7 @@ class Largest
     System.out.println(largest);
 
     scanner.close();
-    \}
+    }
 }`
 },
 
@@ -1337,6 +1337,103 @@ class MultiplicationTable
 
     for (i = 1; i < 11; i++)
       System.out.println(num + " x " + i + " = " + num * i);
+
+    scanner.close();
+  }
+}`
+},
+
+
+"fibonacci":
+{
+'js':
+`first = 0;
+second = 1;
+
+limit = prompt("Enter Limit: ")
+
+console.log(first, second);
+for (i = 2; i < limit; i++)
+{
+  next = first + second;
+  console.log(next);
+  [first, second] = [second, next];
+}`,
+
+'py':
+`first = 0
+second = 1
+
+limit = int(input("Enter Limit: "))
+
+print(first)
+print(second)
+for i in range(2, limit):
+  next = first + second
+  print(next)
+  first, second = second, next`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int limit, first = 0, second = 1, next, i;
+
+  printf("Enter Limit: ");
+  scanf("%d", &limit);
+
+  printf("%d\\n%d\\n", first, second);
+  for (i = 2; i < limit; i++)
+  {
+    next = first + second;
+    printf("%d\\n", next);
+    first = second;
+    second = next;
+  }
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int limit, first = 0, second = 1, next, i;
+
+  cout << "Enter Limit: ";
+  cin >> limit;
+
+  cout << first << "\\n" << second;
+  for (i = 2; i < limit; i++)
+  {
+    next = first + second;
+    cout << next << "\\n";
+    first = second;
+    second = next;
+  }
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Fibonacci
+{
+  public static void main(String[] args)
+  {
+    int limit, first = 0, second = 1, next, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Limit: ");
+    limit = scanner.nextInt();
+
+    System.out.println(first + "\\n" + second);
+    for (i = 2; i < limit; i++)
+    {
+      next = first + second;
+      System.out.println(next);
+      first = second;
+      second = next;
+    }
 
     scanner.close();
   }
