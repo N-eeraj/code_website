@@ -1626,6 +1626,105 @@ class Reverse
 },
 
 
+"palindrome":
+{
+'js':
+`let input = prompt("Enter Input");
+
+if (input == input.split('').reverse().join(''))
+  console.log("Palindrome");
+else
+  console.log("Not Palindrome");`,
+
+'py':
+`input = input("Enter Input: ")
+
+if input == input[::-1]:
+  print("Palindrome") 
+else:
+  print("Not Palindrome")`,
+
+'c':
+`#include<stdio.h>
+#include<string.h>
+void main()
+{
+  char input[25], result[15] = "Palindrome";
+  int length, i;
+
+  printf("Enter Input: ");
+  gets(input);
+
+  length = strlen(input);
+  for (i = 0; i < length / 2; i++)
+  {
+    if (input[i] != input[length - i - 1])
+    {
+      strcpy(result, "Not Palindrome");
+      break;
+    }
+  }
+
+  printf("%s", result);
+}`,
+
+'cpp':
+`#include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+  char input[25];
+  string result = "Palindrome";
+  int length, i;
+  
+  cout << "Enter Input: ";
+  cin >> input;
+
+  length = strlen(input);
+  for (i = 0; i < length / 2; i++)
+  {
+    if (input[i] != input[length - i - 1])
+    {
+      result.replace(0, 14, "Not Palindrome");
+      break;
+    }
+  }
+  cout << result;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Palindrome
+{
+  public static void main(String[] args)
+  {
+    String input, result = "Palindrome";
+    int length, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Input: ");
+    input = scanner.nextLine();
+
+    length = input.length();
+    for (i = 0; i < length / 2; i++)
+    {
+      if (input.charAt(i) != input.charAt(length - i - 1))
+      {
+        result = "Not Palindrome";
+        break;
+      }
+    }
+    System.out.println(result);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
