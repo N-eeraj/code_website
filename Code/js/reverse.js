@@ -1,0 +1,1 @@
+console.log(Number(prompt("Enter Number: ")).toString().split('').reverse().join(''))

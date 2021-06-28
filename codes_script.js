@@ -1556,6 +1556,76 @@ class NumberLength
 },
 
 
+"reverse":
+{
+'js':
+`console.log(Number(prompt("Enter Number: ")).toString().split('').reverse().join(''))`,
+
+'py':
+`print(str(int(input("Enter Number: ")))[::-1])`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, reverse = 0;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  while (num != 0)
+  {
+    reverse = reverse * 10 + num % 10;
+    num /= 10;
+  }
+  printf("%d", reverse);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num, reverse = 0;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  while (num != 0)
+  {
+    reverse = reverse * 10 + num % 10;
+    num /= 10;
+  }
+  cout << reverse;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Reverse
+{
+  public static void main(String[] args)
+  {
+    int num, reverse = 0;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    num = scanner.nextInt();
+
+    while (num != 0)
+    {
+      reverse = reverse * 10 + num % 10;
+      num /= 10;
+    }
+    System.out.println(reverse);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
