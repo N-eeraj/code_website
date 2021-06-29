@@ -1,0 +1,1 @@
+console.log(prompt("Enter Base") ** prompt("Enter Exponent"));

@@ -1725,6 +1725,69 @@ class Palindrome
 },
 
 
+"power":
+{
+'js':
+`console.log(prompt("Enter Base") ** prompt("Enter Exponent"));`,
+
+'py':
+`print(int(input("Enter Base: ")) ** int(input("Enter Exponent: ")))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int base, exponent, answer;
+
+  printf("Enter Base: ");
+  scanf("%d", &base);
+  printf("Enter Exponent: ");
+  scanf("%d", &exponent);
+
+  answer = pow(base, exponent);;
+  printf("%d", answer);
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+  int base, exponent;
+
+  cout << "Enter Base: ";
+  cin >> base;
+  cout << "Enter Exponent: ";
+  cin >> exponent;
+
+  cout << pow(base, exponent);
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Power
+{
+  public static void main(String[] args)
+  {
+    int base, exponent;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Base: ");
+    base = scanner.nextInt();
+    System.out.println("Enter Exponent: ");
+    exponent = scanner.nextInt();
+
+    System.out.println(Math.pow(base, exponent));
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
