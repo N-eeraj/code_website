@@ -1788,6 +1788,108 @@ class Power
 },
 
 
+"prime":
+{
+'js':
+`prime = "Prime";
+
+num = prompt("Enter Number");
+
+for (i = 2; i < num; i++)
+{
+  if (num % i == 0)
+  {
+    prime = "Not Prime";
+    break;
+  }
+}
+console.log(prime);`,
+
+'py':
+`prime = "Prime"
+
+num = int(input("Enter Number: "))
+
+for i in range(2, num):
+  if num % i == 0:
+    prime = "Not Prime"
+    break
+print(prime)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, i;
+  char prime[10] = "Prime";
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  for (i = 2; i < num; i++)
+  {
+    if (num % i == 0)
+    {
+      strcpy(prime, "Not Prime");
+      break;
+    }
+  }
+  printf("%s", prime);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num, i;
+  string prime = "Prime";
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  for (i = 2; i < num; i++)
+  {
+    if (num % i == 0)
+    {
+      prime.replace(0, 10, "Not Prime");
+      break;
+    }
+  }
+  cout << prime;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Prime
+{
+  public static void main(String[] args)
+  {
+    int num, i;
+    String prime = "Prime";
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    num = scanner.nextInt();
+
+    for (i = 2; i < num; i++)
+    {
+      if (num % i == 0)
+      {
+        prime = "Not Prime";
+        break;
+      }
+    }
+    System.out.println(prime);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
