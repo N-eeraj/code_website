@@ -1890,6 +1890,128 @@ class Prime
 },
 
 
+"prime_range":
+{
+'js':
+`let range = prompt("Enter Range");
+
+for (i = 2; i <= range; i++)
+{
+  let prime = true;
+  for (j = 2; j < i; j++)
+  {
+    if (i % j == 0)
+    {
+      prime = false;
+      break;
+    }
+  }
+  if (prime)
+    console.log(i)
+}`,
+
+'py':
+`limit = int(input("Enter Range: "))
+
+for i in range(2, limit + 1):
+  prime = True
+  for j in range(2, i):
+    if i % j == 0:
+      prime = False
+      break
+  if prime:
+    print(i)`,
+
+'c':
+`#include<stdio.h>
+#include<stdbool.h>
+void main()
+{
+  int range, i, j;
+  bool prime;
+
+  printf("Enter Range: ");
+  scanf("%d", &range);
+
+  for (i = 2; i <= range; i++)
+  {
+    prime = true;
+    for (j = 2; j < i; j++)
+    {
+      if (i % j == 0)
+      {
+        prime = false;
+        break;
+      }
+    }
+    if (prime)
+      printf("%d\\n", i);
+  }
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int range, i, j;
+  bool prime;
+
+  cout << "Enter Range: ";
+  cin >> range;
+
+  for (i = 2; i <= range; i++)
+  {
+    prime = true;
+    for (j = 2; j < i; j++)
+    {
+      if (i % j == 0)
+      {
+        prime = false;
+        break;
+      }
+    }
+    if (prime)
+      cout << i << "\\n";
+  }
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class PrimeRange
+{
+  public static void main(String[] args)
+  {
+    int range, i, j;
+    boolean prime;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Range: ");
+    range = scanner.nextInt();
+
+    for (i = 2; i <= range; i++)
+    {
+      prime = true;
+      for (j = 2; j < i; j++)
+      {
+        if (i % j == 0)
+        {
+          prime = false;
+          break;
+        }
+      }
+      if (prime)
+        System.out.println(i);
+    }
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
