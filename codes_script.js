@@ -2012,6 +2012,128 @@ class PrimeRange
 },
 
 
+"quadratic_roots":
+{
+'js':
+`a = prompt("Enter Coefficient a");
+b = prompt("Enter Coefficient b");
+c = prompt("Enter Coefficient c");
+
+let d = b ** 2 - (4 * a * c);
+if (d > 0)
+{
+  console.log((-b + Math.sqrt(d)) / (2 * a));
+  console.log((-b - Math.sqrt(d)) / (2 * a));
+}
+else if (d == 0)
+  console.log(-b / (2 * a));
+else
+  console.log("Complex Roots");`,
+
+'py':
+`from math import sqrt
+
+a = float(input("Enter Coefficient a: "))
+b = float(input("Enter Coefficient b: "))
+c = float(input("Enter Coefficient c: "))
+
+d = b ** 2 - (4 * a * c)
+if d > 0:
+  print((-b + sqrt(d)) / (2 * a))
+  print((-b - sqrt(d)) / (2 * a))
+elif d == 0:
+  print(-b / (2 * a))
+else:
+  print("Complex Roots")`,
+
+'c':
+`#include<stdio.h>
+#include<math.h>
+void main()
+{
+  float a, b, c, d;
+
+  printf("Enter Coefficient a: ");
+  scanf("%f", &a);
+  printf("Enter Coefficient b: ");
+  scanf("%f", &b);
+  printf("Enter Coefficient c: ");
+  scanf("%f", &c);
+
+  d = pow(b, 2) - (4 * a * c);
+  if (d > 0)
+  {
+    printf("%f\n", (-b + sqrt(d)) / (2 * a));
+    printf("%f", (-b - sqrt(d)) / (2 * a));
+  }
+  else if (d == 0)
+    printf("%f", -b / (2 * a));
+  else
+    printf("Complex Roots");
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+  float a, b, c, d;
+
+  cout << "Enter Coefficient a: ";
+  cin >> a;
+  cout << "Enter Coefficient b: ";
+  cin >> b;
+  cout << "Enter Coefficient c: ";
+  cin >> c;
+
+  d = pow(b,2) - (4 * a * c);
+  if (d > 0)
+  {
+    cout << (-b + sqrt(d)) / (2 * a) << "\n";
+    cout << (-b - sqrt(d)) / (2 * a);
+  }
+  else if(d == 0)
+    cout << -b / (2 * a);
+  else
+    cout << "Complex Roots";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Roots
+{
+  public static void main(String[] args)
+  {
+    double a, b, c, d;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Coefficient a: ");
+    a = scanner.nextFloat();
+    System.out.println("Enter Coefficient b: ");
+    b = scanner.nextFloat();
+    System.out.println("Enter Coefficient c: ");
+    c = scanner.nextFloat();
+
+    d = Math.pow(b, 2) - (4 * a * c);
+    if (d > 0)
+    {
+      System.out.println((-b + Math.sqrt(d) )/ (2 * a));
+      System.out.println((-b - Math.sqrt(d)) / (2 * a));
+    }
+    else if (d == 0)
+      System.out.println(-b / (2 * a));
+    else
+      System.out.println("Complex Roots");
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
