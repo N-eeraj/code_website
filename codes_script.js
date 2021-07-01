@@ -2231,6 +2231,116 @@ class GCD
 },
 
 
+"lcm":
+{
+'js':
+`num1 = Number(prompt("Enter First Number"));
+num2 = Number(prompt("Enter Second Number"));
+
+let num1M = num1;
+let num2M = num2;
+while (num1M != num2M)
+{
+  if (num1M < num2M)
+    num1M += num1;
+  else
+    num2M += num2;
+}
+console.log(num1M);`,
+
+'py':
+`num1 = int(input("Enter First Number: "))
+num2 = int(input("Enter Second Number: "))
+
+num1M = num1;
+num2M = num2;
+while (num1M != num2M):
+  if num1M < num2M:
+    num1M += num1
+  else:
+    num2M += num2
+print(num1M)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num1, num2, num1M, num2M;
+
+  printf("Enter First Number: ");
+  scanf("%d", &num1);
+  printf("Enter Second Number: ");
+  scanf("%d", &num2);
+
+  num1M = num1;
+  num2M = num2;
+  while (num1M != num2M)
+  {
+    if (num1M < num2M)
+      num1M += num1;
+    else
+      num2M += num2;
+  }
+  printf("%d", num1M);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num1, num2, num1M, num2M;
+
+  cout << "Enter First Number: ";
+  cin >> num1;
+  cout << "Enter Second Number: ";
+  cin >> num2;
+
+  num1M = num1;
+  num2M = num2;
+  while (num1M != num2M)
+  {
+    if (num1M < num2M)
+      num1M += num1;
+    else
+      num2M += num2;
+  }
+  cout << num1M;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class LCM
+{
+  public static void main(String[] args)
+  {
+    int num1, num2, num1M, num2M;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter First Number: ");
+    num1 = scanner.nextInt();
+    System.out.println("Enter Second Number: ");
+    num2 = scanner.nextInt();
+
+    num1M = num1;
+    num2M = num2;
+    while (num1M != num2M)
+    {
+      if (num1M < num2M)
+        num1M += num1;
+      else
+        num2M += num2;
+    }
+    System.out.println(num1M);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
