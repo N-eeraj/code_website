@@ -2134,6 +2134,103 @@ class Roots
 },
 
 
+"gcd":
+{
+'js':
+`num1 = prompt("Enter First Number");
+num2 = prompt("Enter Second Number");
+gcd = 1;
+
+num = (num1 < num2)? num1 : num2;
+for (i = 2; i <= num; i++)
+{
+  if (num1 % i == 0 && num2 % i == 0)
+    gcd = i;
+}
+console.log(gcd)`,
+
+'py':
+`num1 = int(input("Enter First Number: "))
+num2 = int(input("Enter Second Number: "))
+gcd = 1
+
+num = num1 if num1 < num2 else num2
+for i in range(2, num + 1):
+  if num1 % i == 0 and num2 % i == 0:
+    gcd = i
+print(gcd)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num1, num2, num, gcd = 1, i;
+
+  printf("Enter First Number: ");
+  scanf("%d", &num1);
+  printf("Enter Second Number: ");
+  scanf("%d", &num2);
+
+  num = num1 < num2 ? num1: num2;
+  for (i = 2; i <= num; i++)
+  {
+    if (num1 % i == 0 && num2 % i == 0)
+      gcd = i;
+  }
+  printf("%d", gcd);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num1, num2, num, gcd = 1, i;
+
+  cout << "Enter First Number: ";
+  cin >> num1;
+  cout << "Enter Second Number: ";
+  cin >> num2;
+
+  num = num1 < num2 ? num1: num2;
+  for (i = 2; i <= num; i++)
+  {
+    if (num1 % i == 0 && num2 % i == 0)
+      gcd = i;
+  }
+  cout << gcd;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class GCD
+{
+  public static void main(String[] args)
+  {
+    int num1, num2, num, gcd = 1, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter First Number: ");
+    num1 = scanner.nextInt();
+    System.out.println("Enter Second Number: ");
+    num2 = scanner.nextInt();
+
+    num = num1 < num2 ? num1: num2;
+    for (i = 2; i<= num; i++)
+    {
+      if (num1 % i == 0 && num2 % i == 0)
+        gcd = i;
+    }
+    System.out.println(gcd);
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
