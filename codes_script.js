@@ -2063,7 +2063,7 @@ void main()
   d = pow(b, 2) - (4 * a * c);
   if (d > 0)
   {
-    printf("%f\n", (-b + sqrt(d)) / (2 * a));
+    printf("%f\\n", (-b + sqrt(d)) / (2 * a));
     printf("%f", (-b - sqrt(d)) / (2 * a));
   }
   else if (d == 0)
@@ -2090,7 +2090,7 @@ int main()
   d = pow(b,2) - (4 * a * c);
   if (d > 0)
   {
-    cout << (-b + sqrt(d)) / (2 * a) << "\n";
+    cout << (-b + sqrt(d)) / (2 * a) << "\\n";
     cout << (-b - sqrt(d)) / (2 * a);
   }
   else if(d == 0)
@@ -2444,6 +2444,83 @@ class Armstrong
       System.out.println("Armstrong");
     else
       System.out.println("Not Armstrong");
+
+    scanner.close();
+  }
+}`
+},
+
+
+"factor":
+{
+'js':
+`num = prompt("Enter Number");
+
+for (i = 1; i <= num; i++)
+{
+  if (num % i == 0)
+    console.log(i);
+}`,
+
+'py':
+`num = int(input("Enter Number: "))
+
+for i in range(1, num + 1):
+  if num % i == 0:
+    print(i)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, i;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  for (i = 1; i <= num; i++)
+  {
+    if (num % i == 0)
+      printf("%d\\n", i);
+  }
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num, i;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  for (i = 1; i <= num; i++)
+  {
+    if (num % i == 0)
+      cout << i << "\\n";
+  }
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Factor
+{
+  public static void main(String[] args)
+  {
+    int num, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    num = scanner.nextInt();
+
+    for (i = 1; i <= num; i++)
+    {
+      if (num % i == 0)
+        System.out.println(i);
+    }
 
     scanner.close();
   }
