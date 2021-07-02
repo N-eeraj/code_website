@@ -2528,6 +2528,157 @@ class Factor
 },
 
 
+"menu_calculator":
+{
+'js':
+`num1 = Number(prompt("Enter First Number"));
+num2 = Number(prompt("Enter Second Number"));
+operation = prompt("1. Addition\\n2. Subtraction\\n3. Multiplication\\n4. Division\\nEnter Operation Number");
+
+switch (operation)
+{
+  case '1':
+      console.log(num1 + num2);
+      break;
+  case '2':
+      console.log(num1 - num2);
+      break;
+  case '3':
+      console.log(num1 * num2);
+      break;
+  case '4':
+      console.log(num1 / num2);
+      break;
+  default:
+    console.log("Invalid Option");
+}`,
+
+'py':
+`num1 = float(input("Enter First Number: "))
+num2 = float(input("Enter Second Number: "))
+operation = input("1. Addition\\n2. Subtraction\\n3. Multiplication\\n4. Division\\nEnter Operation Number: ")
+
+if operation == '1':
+  print(num1 + num2)
+elif operation == '2':
+  print(num1 - num2)
+elif operation == '3':
+  print(num1 * num2)
+elif operation == '4':
+  print(num1 / num2)
+else:
+  print("Invalid Option")`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  float num1, num2;
+  int operation;
+
+  printf("Enter First Number: ");
+  scanf("%f", &num1);
+  printf("Enter Second Number: ");
+  scanf("%f", &num2);
+  printf("1. Addition\\n2. Subtraction\\n3. Multiplication\\n4. Division\\nEnter Operation Number: ");
+  scanf("%d", &operation);
+
+  switch (operation)
+  {
+    case 1:
+      printf("%f", num1 + num2);
+      break;
+    case 2:
+      printf("%f", num1 - num2);
+      break;
+    case 3:
+      printf("%f", num1 * num2);
+      break;
+    case 4:
+      printf("%f", num1 / num2);
+      break;
+    default:
+      printf("Invalid Option");
+  }
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  float num1, num2;
+  int operation;
+
+  cout << "Enter First Number: ";
+  cin >> num1;
+  cout << "Enter Second Number: ";
+  cin >> num2;
+  cout << "1. Addition\\n2. Subtraction\\n3. Multiplication\\n4. Division\\nEnter Operation Number: ";
+  cin >> operation;
+
+  switch (operation)
+  {
+    case 1:
+      cout << num1 + num2;
+      break;
+    case 2:
+      cout << num1 - num2;
+      break;
+    case 3:
+      cout << num1 * num2;
+      break;
+    case 4:
+      cout << num1 / num2;
+      break;
+    default:
+      printf("Invalid Option");
+  }
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class MenuCalculator
+{
+  public static void main(String[] args)
+  {
+    float num1, num2;
+    int operation;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter First Number: ");
+    num1 = scanner.nextFloat();
+    System.out.println("Enter Second Number: ");
+    num2 = scanner.nextFloat();
+    System.out.println("1. Addition\\n2. Subtraction\\n3. Multiplication\\n4. Division\\nEnter Operation Number: ");
+    operation = scanner.nextInt();
+
+    switch (operation)
+    {
+      case 1:
+        System.out.println(num1 + num2);
+        break;
+      case 2:
+        System.out.println(num1 - num2);
+        break;
+      case 3:
+        System.out.println(num1 * num2);
+        break;
+      case 4:
+        System.out.println(num1 / num2);
+        break;
+      default:
+        System.out.println("Invalid Option");
+    }
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
