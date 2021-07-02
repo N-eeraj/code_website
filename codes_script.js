@@ -2341,6 +2341,116 @@ class LCM
 },
 
 
+"armstrong":
+{
+'js':
+`num = prompt("Enter Number");
+
+length = num.length;
+sum = 0
+for (i in num)
+  sum += num[i] ** length;
+if (sum == num)
+  console.log("Armstrong")
+else
+  console.log("Not Armstrong ")`,
+
+'py':
+`num = int(input("Enter Number: "))
+
+length = len(str(num))
+sum = 0
+for i in str(num):
+  sum += int(i) ** length
+if sum == num:
+  print("Armstrong")
+else:
+  print("Not Armstrong")`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, numCopy, length = 1, sum = 0, i;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  numCopy = num;
+  while (numCopy / 10 != 0)
+  {
+    numCopy /= 10;
+    length++;
+  }
+  numCopy = num;
+  for (i = 0; i < length; i++)
+  {
+    sum += pow(numCopy % 10, length);
+    numCopy /= 10;
+  }
+  if (num == sum)
+    printf("Armstrong");
+  else
+    printf("Not Armstrong");
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+  int num, numCopy, length = 1, sum = 0, i;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  numCopy = num;
+  while (numCopy / 10 != 0)
+  {
+    numCopy /= 10;
+    length++;
+  }
+  numCopy = num;
+  for (i = 0; i < length; i++)
+  {
+    sum += pow(numCopy % 10, length);
+    numCopy /= 10;
+  }
+  if (num == sum)
+    cout << "Armstrong";
+  else
+    cout << "Not Armstrong";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Armstrong
+{
+  public static void main(String[] args)
+  {
+    int num, length = 1, sum = 0, i;
+    Scanner scanner = new Scanner(System.in);
+        
+    System.out.println("Enter Number: ");
+    num = scanner.nextInt();
+
+    length = Integer.toString(num).length();
+    for (i = 0; i < length; i++)
+      sum += Math.pow(Character.getNumericValue(Integer.toString(num).charAt(i)), length);
+    if (sum == num)
+      System.out.println("Armstrong");
+    else
+      System.out.println("Not Armstrong");
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
