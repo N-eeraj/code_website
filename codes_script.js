@@ -2809,6 +2809,82 @@ class DecimalOctal
 },
 
 
+"decimal_hexadecimal":
+{
+'js':
+`console.log(parseInt(prompt("Enter Number")).toString(16).toUpperCase());`,
+
+'py':
+`print(str(hex(int(input("Enter Number: ")))).upper()[2:])`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, hex, i = 0, j;
+  char hexD[25] = "";
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  while (num != 0)
+  {
+    hex = num % 16;
+    if (hex > 9)
+      hex += 55;
+    else
+      hex += 48;
+    hexD[i++] = hex;
+    num /= 16;
+  };
+  for (j = i - 1; j >= 0; j--)
+    printf("%c", hexD[j]);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int num, hex, i = 0, j;
+  char hexD[25] = "";
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  while (num != 0)
+  {
+    hex = num % 16;
+    if (hex > 9)
+      hex += 55;
+    else
+      hex += 48;
+    hexD[i++] = hex;
+    num /= 16;
+  };
+  for (j = i - 1; j >= 0; j--)
+    cout << hexD[j];
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class DecimalHexadecimal
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    System.out.println(Integer.toHexString(scanner.nextInt()).toUpperCase());
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':

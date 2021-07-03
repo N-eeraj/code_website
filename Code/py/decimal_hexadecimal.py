@@ -1,0 +1,1 @@
+print(str(hex(int(input("Enter Number: ")))).upper()[2:])
