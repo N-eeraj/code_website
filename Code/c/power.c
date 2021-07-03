@@ -8,6 +8,6 @@ void main()
     printf("Enter Exponent: ");
     scanf("%d", &exponent);
 
-    answer = pow(base, exponent);;
+    answer = pow(base, exponent);
     printf("%d", answer);
 }
