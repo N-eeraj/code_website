@@ -1,0 +1,1 @@
+console.log(parseInt(prompt("Enter Number")).toString(2));

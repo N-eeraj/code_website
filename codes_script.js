@@ -1744,7 +1744,7 @@ void main()
   printf("Enter Exponent: ");
   scanf("%d", &exponent);
 
-  answer = pow(base, exponent);;
+  answer = pow(base, exponent);
   printf("%d", answer);
 }`,
 
@@ -2672,6 +2672,72 @@ class MenuCalculator
       default:
         System.out.println("Invalid Option");
     }
+
+    scanner.close();
+  }
+}`
+},
+
+
+"decimal_binary":
+{
+'js':
+`console.log(parseInt(prompt("Enter Number")).toString(2));`,
+
+'py':
+`print(str(bin(int(input("Enter Number: "))))[2:])`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, binary = 0, i = 0;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  do
+  {
+    binary += (num % 2) * pow(10, i);
+    num /= 2;
+    i++;
+  } while (num != 0);
+  printf("%d", binary);
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+  int num, binary = 0, i = 0;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  do
+  {
+    binary += (num % 2) * pow(10, i);
+    num /= 2;
+    i++;
+  } while (num != 0);
+  cout << binary;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class DecimalBinary
+{
+  public static void main(String[] args)
+  {
+    int num;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    System.out.println(Integer.toBinaryString(scanner.nextInt()));
 
     scanner.close();
   }
