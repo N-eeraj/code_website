@@ -1,0 +1,1 @@
+print(str(oct(int(input("Enter Number: "))))[2:])

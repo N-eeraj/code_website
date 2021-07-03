@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-class DecimalBinary
+class DecimalOctal
 {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter Number: ");
-        System.out.println(Integer.toBinaryString(scanner.nextInt()));
+        System.out.println(Integer.toOctalString(scanner.nextInt()));
 
         scanner.close();
     }
