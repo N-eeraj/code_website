@@ -3035,6 +3035,94 @@ class OctalDecimal
 },
 
 
+"hexadecimal_decimal":
+{
+'js':
+`console.log(parseInt(prompt("Enter Number"), 16));`,
+
+'py':
+`print(int(input("Enter Number: "), 16))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  char num[10];
+  int dec = 0, temp, i, j = 0;
+
+  printf("Enter Number: ");
+  gets(num);
+
+  for (i = strlen(num) - 1; i >= 0; i--)
+  {
+    temp = num[i];
+    if (temp > 47 && temp < 58)
+      temp -= 48;
+    else if (temp > 64 && temp < 71)
+      temp -= 55;
+    else if (temp > 96 && temp < 103)
+      temp -= 87;
+    else
+    {
+      printf("\\nInvalid Input\\n");
+      break;
+    }
+    dec += temp * pow(16, j++);
+  }
+  printf("%d", dec);
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+#include<cstring>
+using namespace std;
+int main()
+{
+  char num[10];
+  int dec = 0, temp, i, j = 0;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  for (i = strlen(num) - 1; i >= 0; i--)
+  {
+    temp = num[i];
+    if (temp > 47 && temp < 58)
+      temp -= 48;
+    else if (temp > 64 && temp < 71)
+      temp -= 55;
+    else if (temp > 96 && temp < 103)
+      temp -= 87;
+    else
+    {
+      cout << "\\nInvalid Input\\n";
+      break;
+    }
+    dec += temp * pow(16, j++);
+  }
+  cout << dec;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class HexadecimalDecimal
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    System.out.println(Integer.parseInt(scanner.next(), 16));
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
