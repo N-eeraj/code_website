@@ -1,0 +1,1 @@
+print(int(input("Enter Number: "), 2))

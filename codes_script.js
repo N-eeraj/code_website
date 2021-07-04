@@ -2885,6 +2885,81 @@ class DecimalHexadecimal
 },
 
 
+"binary_decimal":
+{
+'js':
+`console.log(parseInt(prompt("Enter Number"), 2));`,
+
+'py':
+`print(int(input("Enter Number: "), 2))`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int num, dec = 0, temp, i = 0;
+
+  printf("Enter Number: ");
+  scanf("%d", &num);
+
+  while (num != 0)
+  {
+    temp = num % 10;
+    if (temp != 0 && temp!= 1)
+    {
+      printf("\\nInvalid Input\\n");
+      break;
+    }
+    dec += temp * pow(2, i++);
+    num /= 10;
+  }
+  printf("%d", dec);
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+  int num, dec = 0, temp, i = 0;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  while (num != 0)
+  {
+    temp = num % 10;
+    if (temp != 0 && temp!= 1)
+    {
+      cout << "\\nInvalid Input\\n";
+      break;
+    }
+    dec += temp * pow(2, i++);
+    num /= 10;
+  }
+  cout << dec;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class BinaryDecimal
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Number: ");
+    System.out.println(Integer.parseInt(scanner.next(), 2));
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
