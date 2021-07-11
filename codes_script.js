@@ -3610,6 +3610,104 @@ class HexadecimalBinary
     scanner.close();
   }
 }`
+},
+
+
+"hexadecimal_octal":
+{
+'js':
+`console.log(parseInt(prompt("Enter Number"), 16).toString(8));`,
+
+'py':
+`print(str(oct(int(input("Enter Number: "), 16)))[2:])`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  char num[10];
+  int dec = 0, oct = 0, temp, i, j = 0, k = 0;
+
+  printf("Enter Number: ");
+  gets(num);
+
+  for (i = strlen(num) - 1; i >= 0; i--)
+  {
+    temp = num[i];
+    if (temp > 47 && temp < 58)
+      temp -= 48;
+    else if (temp > 64 && temp < 71)
+      temp -= 55;
+    else if (temp > 96 && temp < 103)
+      temp -= 87;
+    else
+    {
+      printf("\\nInvalid Input\\n");
+      break;
+    }
+    dec += temp * pow(16, j++);
+  }
+  do
+  {
+    oct += (dec % 8) * pow(10, k++);
+    dec /= 8;
+  } while (dec != 0);
+  printf("%d", oct);
+}`,
+
+'cpp':
+`#include<iostream>
+#include<cmath>
+#include<cstring>
+using namespace std;
+int main()
+{
+  char num[10];
+  int dec = 0, oct = 0, temp, i, j = 0, k = 0;
+
+  cout << "Enter Number: ";
+  cin >> num;
+
+  for (i = strlen(num) - 1; i >= 0; i--)
+  {
+    temp = num[i];
+    if (temp > 47 && temp < 58)
+      temp -= 48;
+    else if (temp > 64 && temp < 71)
+      temp -= 55;
+    else if (temp > 96 && temp < 103)
+      temp -= 87;
+    else
+    {
+      cout << "\\nInvalid Input\\n";
+      break;
+    }
+    dec += temp * pow(16, j++);
+  }
+  do
+  {
+    oct += (dec % 8) * pow(10, k++);
+    dec /= 8;
+  } while (dec != 0);
+  cout << oct;
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class HexadecimalOctal
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Numbrer: ");
+    System.out.println(Integer.toOctalString(Integer.parseInt(scanner.next(), 16)));
+
+    scanner.close();
+  }
+}`
 }
 
 
