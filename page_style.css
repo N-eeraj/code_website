@@ -5,6 +5,10 @@
     font-size: 5vw;
 }
 sup{color: white;}
+.pattern{
+    color: white;
+    font-weight: bold;
+}
 
 #languages{
     display: flex;
