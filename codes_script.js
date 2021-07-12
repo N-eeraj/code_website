@@ -3871,6 +3871,117 @@ class Pattern2
 },
 
 
+"pattern3":
+{
+'js':
+`let limit = prompt("Enter Number");
+
+for (let i = 1; i < limit; i++)
+{
+  let star = "";
+  for (let j = 1; j <= i; j++)
+    star += "* ";
+  console.log(star);
+}
+for (i = limit; i > 0; i--)
+{
+  star = "";
+  for (j = i; j > 0; j--)
+    star += "* ";
+  console.log(star);
+}`,
+
+'py':
+`limit = int(input("Enter Limit: "))
+
+for i in range(1, limit):
+  print("* " * i)
+for i in range(limit, 0, -1):
+  print("* " * i)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int limit, i, j;
+
+  printf("Enter Limit: ");
+  scanf("%d", &limit);
+
+  for (i = 1; i < limit; i++)
+  {
+    for (j = 0; j < i; j++)
+      printf("* ");
+    printf("\\n");
+  }
+  for (i = limit; i > 0; i--)
+  {
+    for (j = i; j > 0; j--)
+      printf("* ");
+    printf("\\n");
+  }
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int limit, i, j;
+
+  cout << "Enter Limit: ";
+  cin >> limit;
+
+  for (i = 1; i < limit; i++)
+  {
+    for (j = 0; j < i; j++)
+      cout << "* ";
+    cout << "\\n";
+  }
+  for (i = limit; i > 0; i--)
+  {
+    for (j = i; j > 0; j--)
+      cout << "* ";
+    cout << "\\n";
+  }
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Pattern3
+{
+  public static void main(String[] args)
+  {
+    int limit, i, j;
+    String star;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Limit: ");
+    limit = scanner.nextInt();
+
+    for (i = 1; i < limit; i++)
+    {
+      star = "";
+      for (j = 1; j <= i; j++)
+        star += "* ";
+      System.out.println(star);
+    }
+    for (i = limit; i > 0; i--)
+    {
+      star = "";
+      for (j = i; j > 0; j--)
+        star += "* ";
+      System.out.println(star);
+    }
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "programName":
 // {
 // 'js':
