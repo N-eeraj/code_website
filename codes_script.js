@@ -4017,6 +4017,82 @@ class Pattern4
 },
 
 
+"pattern5":
+{
+'js':
+`let limit = prompt("Enter Limit");
+
+for (i = limit; i > 0; i--)
+  console.log("  ".repeat(limit - i) + " *".repeat(i));`,
+
+'py':
+`limit = int(input("Enter Limit: "))
+
+for i in range(limit, 0, -1):
+    print("  " * (limit - i), " *" * i)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int limit, i, j;
+
+  printf("Enter Limit: ");
+  scanf("%d", & limit);
+
+  for (i = limit; i > 0; i--)
+  {
+    for (j = 0; j < limit - i; j++)
+      printf("  ");
+    for (j = 0; j < i; j++)
+      printf(" *");
+    printf("\\n");
+  }
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int limit, i, j;
+
+  cout << "Enter Limit: ";
+  cin >> limit;
+
+  for (i = limit; i > 0; i--)
+  {
+    for (j = 0; j < limit - i; j++)
+      cout << "  ";
+    for (j = 0; j < i; j++)
+      cout << " *";
+    cout << "\\n";
+  }
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Pattern5
+{
+  public static void main(String[] args)
+  {
+    int limit, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Limit: ");
+    limit = scanner.nextInt();
+
+    for (i = limit; i > 0; i--)
+      System.out.println("  ".repeat(limit - i) + " *".repeat(i));
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "pattern":
 // {
 // 'js':
