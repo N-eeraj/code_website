@@ -1,16 +1,6 @@
-let limit = prompt("Enter Number");
+let limit = prompt("Enter Limit");
 
-for (let i = 1; i < limit; i++)
-{
-  let star = "";
-  for (let j = 1; j <= i; j++)
-    star += "* ";
-  console.log(star);
-}
+for (i = 1; i < limit; i++)
+  console.log("* ".repeat(i).trim());
 for (i = limit; i > 0; i--)
-{
-  star = "";
-  for (j = i; j > 0; j--)
-    star += "* ";
-  console.log(star);
-}
+  console.log("* ".repeat(i).trim());

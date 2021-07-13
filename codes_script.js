@@ -3715,13 +3715,9 @@ class HexadecimalOctal
 {
 'js':
 `let limit = prompt("Enter Limit");
+
 for (i = 1; i <= limit; i++)
-{
-  let star = "";
-  for (j = 1; j <= i; j++)
-    star += "* ";
-  console.log(star);
-}`,
+  console.log("* ".repeat(i).trim());`,
 
 'py':
 `for i in range(1, int(input("Enter Limit: ")) + 1):
@@ -3795,13 +3791,9 @@ class Pattern1
 {
 'js':
 `let limit = prompt("Enter Limit");
+
 for (i = limit; i > 0; i--)
-{
-  let star = "";
-  for (j = i; j > 0; j--)
-    star += "* ";
-  console.log(star);
-}`,
+  console.log("* ".repeat(i).trim());`,
 
 'py':
 `for i in range(int(input("Enter Limit: ")), 0, -1):
@@ -3874,22 +3866,12 @@ class Pattern2
 "pattern3":
 {
 'js':
-`let limit = prompt("Enter Number");
+`let limit = prompt("Enter Limit");
 
-for (let i = 1; i < limit; i++)
-{
-  let star = "";
-  for (let j = 1; j <= i; j++)
-    star += "* ";
-  console.log(star);
-}
+for (i = 1; i < limit; i++)
+  console.log("* ".repeat(i).trim());
 for (i = limit; i > 0; i--)
-{
-  star = "";
-  for (j = i; j > 0; j--)
-    star += "* ";
-  console.log(star);
-}`,
+  console.log("* ".repeat(i).trim());`,
 
 'py':
 `limit = int(input("Enter Limit: "))
@@ -3982,7 +3964,26 @@ class Pattern3
 },
 
 
-// "programName":
+"pattern4":
+{
+'js':
+``,
+
+'py':
+``,
+
+'c':
+``,
+
+'cpp':
+``,
+
+'java':
+``
+},
+
+
+// "pattern":
 // {
 // 'js':
 // ``,
