@@ -4343,6 +4343,128 @@ class Pattern8
 },
 
 
+"pattern9":
+{
+'js':
+`limit = prompt("Enter Limit");
+
+if (limit % 2 == 1)
+{
+  for (i = 0; i * 2 + 1 <= limit; i++)
+    console.log("   ".repeat(Math.floor(limit / 2) - i) + " * ".repeat(i * 2 + 1));
+  for (i = Math.floor(limit / 2); i > 0; i--)
+    console.log("   ".repeat(Math.ceil(limit / 2) - i) + " * ".repeat(i * 2 - 1));
+}
+else
+  console.log("Enter Odd Number");
+`,
+
+'py':
+`limit = int(input("Enter Limit: "))
+
+if limit % 2 == 1:
+  for i in range(1, limit // 2 + 1):
+    print("   " * (limit // 2 - i + 1) + " * " * (2 * i - 1))
+  for i in range(limit // 2 + 1, 0, -1):
+    print("   " * (limit // 2 - i + 1) + " * " * (2 * i - 1))
+else:
+  print("Enter Odd Number")`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int limit, i, j;
+
+  printf("Enter Limit: ");
+  scanf("%d", &limit);
+
+  if (limit % 2 == 1)
+  {
+    for (i = 1; i <= limit / 2 + 1; i++)
+    {
+      for (j = 0; j < limit / 2 - i + 1; j++)
+        printf("   ");
+      for (j = 0; j < 2 * i - 1; j++)
+        printf(" * ");
+      printf("\\n");
+    }
+    for (i = limit / 2; i >= 0 + 1; i--)
+    {
+      for (j = 0; j < limit / 2 - i + 1; j++)
+        printf("   ");
+      for (j = 0; j < 2 * i - 1; j++)
+        printf(" * ");
+      printf("\\n");
+    }
+  }
+  else
+    printf("Enter Odd Number");
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int limit, i, j;
+
+  cout << "Enter Limit: ";
+  cin >> limit;
+
+  if (limit % 2 == 1)
+  {
+    for (i = 1; i <= limit / 2 + 1; i++)
+    {
+      for (j = 0; j < limit / 2 - i + 1; j++)
+        cout << "   ";
+      for (j = 0; j < 2 * i - 1; j++)
+        cout << " * ";
+      cout << "\\n";
+    }
+    for (i = limit / 2; i >= 0 + 1; i--)
+    {
+      for (j = 0; j < limit / 2 - i + 1; j++)
+        cout << "   ";
+      for (j = 0; j < 2 * i - 1; j++)
+        cout << " * ";
+      cout << "\\n";
+    }
+  }
+  else
+    cout << "Enter Odd Number";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+
+class Pattern9
+{
+  public static void main(String[] args)
+  {
+    int limit, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Limit: ");
+    limit = scanner.nextInt();
+
+    if (limit % 2 == 1)
+    {
+      for (i = 0; i * 2 + 1 <= limit; i++)
+        System.out.println("   ".repeat(Math.round(limit / 2) - i) + " * ".repeat(i * 2 + 1));
+      for (i = Math.round(limit / 2); i > 0; i--)
+        System.out.println("   ".repeat(Math.round(limit / 2) - i + 1) + " * ".repeat(i * 2 - 1));
+    }
+    else
+      System.out.println("Enter Odd Number");
+
+    scanner.close();
+  }
+}`
+},
+
+
 // "pattern":
 // {
 // 'js':
