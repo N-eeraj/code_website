@@ -33,7 +33,9 @@ nav h1{
     height: 5vh;
     cursor: pointer;
     transition: 0.3s;
-}#dark-btn:hover{transform: scale(1.1);}
+}#dark-btn:hover{
+    transform: scale(1.1) rotate(-30deg);
+}
 
 #carousel-section{
     width: 80vw;

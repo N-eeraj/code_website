@@ -4465,7 +4465,141 @@ class Pattern9
 },
 
 
-// "pattern":
+"selection_sort":
+{
+'js':
+`arr = [];
+length = prompt("Enter Length");
+
+for (i = 0; i < length; i++)
+  arr.push(Number(prompt("Enter Number")));
+
+for (i = 0; i < length; i++)
+{
+  for (j = i + 1; j < length; j++)
+  {
+    if (arr[i] > arr[j])
+      [arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+}
+console.log(arr);`,
+
+'py':
+`arr = []
+length = int(input("Enter Length: "))
+
+for i in range(length):
+  arr.append(int(input("Enter Number: ")))
+
+for i in range(length):
+  for j in range(i + 1, length):
+    if arr[i] > arr[j]:
+      arr[i], arr[j] = arr[j], arr[i]
+print(arr)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int length, temp, i, j;
+
+  printf("Enter Length: ");
+  scanf("%d", &length);
+  int arr[length];
+  for (i = 0; i < length; i++)
+  {
+    printf("Enter Number: ");
+    scanf("%d", &arr[i]);
+  }
+
+  for (i = 0; i < length; i++)
+  {
+    for (j = i + 1; j < length; j++)
+    {
+      if (arr[i] > arr[j])
+      {
+        temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
+      }
+    }
+  }
+  for (i = 0; i < length; i++)
+    printf("%d ", arr[i]);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int length, temp, i, j;
+
+  cout << "Enter Length: ";
+  cin >> length;
+  int arr[length];
+  for (i = 0; i < length; i++)
+  {
+    cout << "Enter Number: ";
+    cin >> arr[i];
+  }
+
+  for (i = 0; i <  length; i++)
+  {
+    for (j = i + 1; j < length; j++)
+    {
+      if (arr[i] > arr[j])
+      {
+        temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
+      }
+    }
+  }
+  for (i = 0; i < length; i++)
+    cout << arr[i] << " ";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+import java.util.Arrays;
+
+class SelectionSort
+{
+  public static void main(String[] args)
+  {
+    int length, temp, i, j;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Length: ");
+    length = scanner.nextInt();
+    int[] arr = new int[length];
+    for (i = 0; i < length; i++)
+    {
+      System.out.println("Enter Number: ");
+      arr[i] = scanner.nextInt();
+    }
+
+    for (i = 0; i < length; i++)
+    {
+      for (j = i + 1; j < length; j++)
+      {
+        if (arr[i] > arr[j])
+        {
+          temp = arr[j];
+          arr[j] = arr[i];
+          arr[i] = temp;
+        }
+      }
+    }
+    System.out.println(Arrays.toString(arr));
+  }
+}`
+},
+
+
+// "sort":
 // {
 // 'js':
 // ``,
