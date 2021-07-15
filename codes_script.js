@@ -4599,6 +4599,151 @@ class SelectionSort
 },
 
 
+"insertion_sort":
+{
+'js':
+`arr = [];
+length = prompt("Enter Length");
+
+for (i = 0; i < length; i++)
+  arr.push(Number(prompt("Enter Number")));
+
+for (i = 1; i < length; i++)
+{
+  select = i;
+  for (j = select - 1; j > -1; j--)
+  {
+    if (arr[select] < arr[j])
+    {
+      [arr[select], arr[j]] = [arr[j], arr[select]]
+      select = j;
+    }
+  }
+}
+console.log(arr);`,
+
+'py':
+`arr = []
+length = int(input("Enter Length: "))
+
+for i in range(length):
+  arr.append(int(input("Enter Number: ")))
+
+for i in range(1, length):
+  for j in range(i - 1, -1, -1):
+    if arr[i] < arr[j]:
+      arr[i], arr[j] = arr[j], arr[i]
+      i = j
+print(arr)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int length, temp, i, j, select;
+
+  printf("Enter Length: ");
+  scanf("%d", &length);
+  int arr[length];
+  for (i = 0; i < length; i++)
+  {
+    printf("Enter Number: ");
+    scanf("%d", &arr[i]);
+  }
+
+  for (i = 1; i < length; i++)
+  {
+    select = i;
+    for (j = select - 1; j > -1; j--)
+    {
+      if (arr[select] < arr[j])
+      {
+        temp = arr[j];
+        arr[j] = arr[select];
+        arr[select] = temp;
+        select = j;
+      }
+    }
+  }
+  for (i = 0; i < length; i++)
+    printf("%d ", arr[i]);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int length, temp, i, j, select;
+
+  cout << "Enter Length: ";
+  cin >> length;
+  int arr[length];
+  for (i = 0; i < length; i++)
+  {
+    cout << "Enter Number: ";
+    cin >> arr[i];
+  }
+
+  for (i = 1; i < length; i++)
+  {
+    select = i;
+    for (j = select - 1; j > -1; j--)
+    {
+      if (arr[select] < arr[j])
+      {
+        temp = arr[j];
+        arr[j] = arr[select];
+        arr[select] = temp;
+        select = j;
+      }
+    }
+  }
+  for (i = 0; i < length; i++)
+    cout << arr[i] << " ";
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+import java.util.Arrays;
+
+class InsertionSort
+{
+  public static void main(String[] args)
+  {
+    int length, temp, i, j, select;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Length: ");
+    length = scanner.nextInt();
+    int[] arr = new int[length];
+    for (i = 0; i < length; i++)
+    {
+      System.out.println("Enter Number: ");
+      arr[i] = scanner.nextInt();
+    }
+
+    for (i = 1; i < length; i++)
+    {
+      select = i;
+      for (j = select - 1; j > -1; j--)
+      {
+        if (arr[select] < arr[j])
+        {
+          temp = arr[j];
+          arr[j] = arr[select];
+          arr[select] = temp;
+          select = j;
+        }
+      }
+    }
+    System.out.println(Arrays.toString(arr));
+  }
+}`
+},
+
+
 // "sort":
 // {
 // 'js':
