@@ -4465,6 +4465,319 @@ class Pattern9
 },
 
 
+"array_ds":
+{
+'js':
+`arr = [];
+
+while (1)
+{
+  console.log("Array: " + arr);
+  length = arr.length;
+
+  option = prompt("Select Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number");
+
+  if (option == 1)
+  {
+    for (i of arr)
+      console.log(i);
+  }
+  else if (1 < option && option < 5)
+  {
+    index = prompt("Enter Index");
+    if (option == 2)
+    {
+      if (index > length)
+      {
+        console.log("Invalid Index\\n");
+        continue;
+      }
+      arr.splice(index, 0, prompt("Enter Element"));
+    }
+    else
+    {
+      if (index >= length)
+      {
+        console.log("Invalid Index\\n");
+        continue;
+      }
+      if (option == 3)
+        arr.splice(index, 1);
+      else
+        arr[index] = prompt("Enter Element");
+    }
+  }
+  else if (option == 5)
+    break;
+  else
+  {
+    console.log("Enter a number between 1 & 4");
+    continue;
+  }
+}
+console.log("Array: " + arr);
+`,
+
+'py':
+`arr = []
+
+while 1:
+  print("Array:", arr)
+  length = len(arr)
+    
+  option = int(input("\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: "))
+  print()
+
+  if option == 1:
+    for i in arr:
+      print(i)
+  elif 1 < option < 5:
+    index = int(input("Enter Index: "))
+    if option == 2:
+      if index > length:
+        print("Invalid Index\\n")
+        continue
+      arr.insert(index, int(input("Enter Element: ")))
+    else:
+      if index >= length:
+        print("Invalid Index\\n")
+        continue
+      if option == 3:
+        arr.pop(index)
+      else:
+        arr[index] = int(input("Enter Element: "))
+  elif option == 5:
+    break
+  else:
+    print("Enter a number between 1 & 4")
+print("Array:", arr)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int arr[25] = {};
+  int length = 0, index, element, option, i;
+  char loop_char;
+
+  while (1)
+  {
+    printf("\\nArray: ");
+    for (i = 0; i < length; i++)
+      printf("%d ", arr[i]);
+
+    printf("\\n\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: ");
+    scanf("%d", &option);
+    printf("\\n");
+
+    if (option == 1)
+    {
+      for (i = 0; i < length; i++)
+        printf("%d\\n", arr[i]);
+    }
+    else if (1 < option && option < 5)
+    {
+      printf("\\nEnter Index: ");
+      scanf("%d", &index);
+      if (option == 2)
+      {
+        if (index > length)
+        {
+          printf("\\nInvalid Index\\n");
+          continue;
+        }
+        printf("\\n\\nEnter Element: ");
+        scanf("%d", &element);
+        for (i = length++; i > index; i--)
+          arr[i] = arr[i - 1];
+        arr[index] = element;
+      }
+      else
+      {
+        if (index >= length)
+        {
+          printf("\\nInvalid Index\\n");
+          continue;
+        }
+        if (option == 3)
+        {
+          for (i = index; i < length; i++)
+            arr[i] = arr[i + 1];
+          length--;
+        }
+        else
+        {
+          printf("\\n\\nEnter Element: ");
+          scanf("%d", &element);
+          arr[index] = element;
+        }
+      }
+    }
+    else if (option == 5)
+      break;
+    else
+      printf("Enter a number between 1 & 4");
+  }
+  printf("\\nArray: ");
+  for (i = 0; i < length; i++)
+    printf("%d ", arr[i]);
+}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+int main()
+{
+  int arr[25] = {};
+  int length = 0, index, element, option, i;
+  char loop_char;
+
+  while (1)
+  {
+    cout << "\\nArray: ";
+    for (i = 0; i < length; i++)
+      cout << arr[i] << " ";
+
+    cout << "\\n\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: ";
+    cin >> option;
+    cout << "\\n";
+
+    if (option == 1)
+    {
+      for (i = 0; i < length; i++)
+        cout << "\\n" << arr[i];
+    }
+    else if (1 < option && option < 5)
+    {
+      cout << "\\nEnter Index: ";
+      cin >> index;
+      if (option == 2)
+      {
+        if (index > length)
+        {
+          cout << "\\nInvalid Index\\n";
+          continue;
+        }
+        cout << "\\n\\nEnter Element: ";
+        cin >> element;
+        for (i = length++; i > index; i--)
+          arr[i] = arr[i - 1];
+        arr[index] = element;
+      }
+      else
+      {
+        if (index >= length)
+        {
+          cout << "\\nInvalid Index\\n";
+          continue;
+        }
+        if (option == 3)
+        {
+          for (i = index; i < length; i++)
+            arr[i] = arr[i + 1];
+          length--;
+        }
+        else
+        {
+          cout << "\\n\\nEnter Element: ";
+          cin >> element;
+          arr[index] = element;
+        }
+      }
+    }
+    else if (option == 5)
+      break;
+    else
+      cout << "Enter a number between 1 & 4";
+  }
+  cout << "\\nArray: ";
+  for (i = 0; i < length; i++)
+    cout << "%d ", arr[i];
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+import java.util.Arrays;
+
+class ArrayDS
+{
+  public static void main(String[] args)
+  {
+    int[] arr = new int[25];
+    int length = 0, option, index, element, i;
+    Scanner scanner = new Scanner(System.in);
+
+    while (true)
+    {
+      int[] a = new int[length];
+      for (i = 0; i < length; i++)
+        a[i] = arr[i];
+      System.out.println("Array: " + Arrays.toString(a));
+
+      System.out.println("\\n\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: ");
+      option = scanner.nextInt();
+      System.out.println("\\n");
+
+      if (option == 1)
+      {
+        for (i = 0; i < length; i++)
+          System.out.println(arr[i]);
+      }
+      else if (1 < option && option < 5)
+      {
+        System.out.println("Enter Index: ");
+        index = scanner.nextInt();
+        if (option == 2)
+        {
+          if (index > length)
+          {
+            System.out.println("\\nInvalid Index");
+            continue;
+          }
+          System.out.println("\\nEnter Element: ");
+          element = scanner.nextInt();
+          for (i = length++; i > index; i--)
+            arr[i] = arr[i - 1];
+          arr[index] = element;
+        }
+        else
+        {
+          if (index >= length)
+          {
+            System.out.println("Invlid Index\\n");
+            continue;
+          }
+          if (option == 3)
+          {
+            for (i = index; i < length; i++)
+              arr[i] = arr[i + 1];
+            length--;
+          }
+          else
+          {
+            System.out.println("\\nEnter Element");
+            element = scanner.nextInt();
+            arr[index] = element;
+          }
+        }
+      }
+      else if (option == 5)
+        break;
+      else
+        System.out.println("Enter a number between 1 & 4");
+    }
+    int[] a = new int[length];
+    for (i = 0; i < length; i++)
+      a[i] = arr[i];
+    System.out.println("Array: " + Arrays.toString(a));
+
+    scanner.close();
+  }
+}`
+},
+
+
 "selection_sort":
 {
 'js':
