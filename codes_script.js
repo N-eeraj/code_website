@@ -788,8 +788,8 @@ console.log(largest)`,
 
 'py':
 `for i in range(int(input("Enter Limit: "))):
-num = float(input("Enter Input: "))
-if i == 0 or largest < num:
+  num = float(input("Enter Input: "))
+  if i == 0 or largest < num:
     largest = num
 
 print(largest)`,
@@ -881,11 +881,11 @@ else
 `num = float(input("Enter Number: "))
 
 if num < 0:
-    print("Negative")
+  print("Negative")
 elif num > 0:
-    print("Positive")
+  print("Positive")
 else:
-    print("Zero")`,
+  print("Zero")`,
 
 'c':
 `#include<stdio.h>
@@ -958,9 +958,9 @@ console.log("Is Digit");`,
 
 'py':
 `if input("Enter Input: ").isdigit():
-print("Is Digit")
+  print("Is Digit")
 else:
-print("Is not Digit")
+  print("Is not Digit")
 `,
 
 'c':
@@ -1190,13 +1190,13 @@ console.log(fact(prompt("Enter Input")));`,
 
 'py':
 `def fact(num):
-factorial = 1
+  factorial = 1
 
-if num == 1:
-  return 1
-factorial = num * fact(num - 1)
+  if num == 1:
+    return 1
+  factorial = num * fact(num - 1)
 
-return factorial
+  return factorial
 
 print(fact(int(input("Enter Input: "))))`,
 
@@ -4526,7 +4526,7 @@ while 1:
   length = len(arr)
     
   option = int(input("\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: "))
-  print()
+  print("")
 
   if option == 1:
     for i in arr:
