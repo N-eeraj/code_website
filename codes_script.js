@@ -5061,6 +5061,277 @@ class QueueDS
 },
 
 
+"stack_ds":
+{
+'js':
+`function isEmpty()
+{return stackTop == 0? true: false;}
+
+let stack = [];
+
+size = prompt("Enter Stack Size")
+
+while (true)
+{
+  console.log("Stack: " + stack);
+  stackTop = stack.length
+
+  option = prompt("Select Stack Operation\\n1. Is Empty?\\n2. Push\\n3. Pop\\n4. Top\\n5. Exit\\nEnter Option Number");
+
+  if (option == 1)
+    console.log(isEmpty()? "Empty": "Not Empty");
+  else if (option == 2)
+    stackTop == size? console.log("Stack will Overflow"): stack.push(prompt("Enter Element"));
+  else if (option == 3)
+    isEmpty()? console.log("Stack is Empty"): stack.pop();
+  else if (option == 4)
+    console.log(isEmpty()? "Stack is Empty": stack[stackTop - 1]);
+  else if (option == 5)
+    break;
+  else
+    console.log("Enter a number between 1 & 5");
+}
+console.log("Stack: " + stack);`,
+
+'py':
+`def isEmpty():
+  return True if top == 0 else False
+
+stack = []
+
+size = int(input("Enter Stack Size: "))
+
+while True:
+  print("Stack:", stack)
+  top = len(stack)
+
+  option = input("\\nSelect Stack Operation\\n1. Is Empty?\\n2. Push\\n3. Pop\\n4. Top\\n5. Exit\\nEnter Option Number: ")
+  print()
+
+  if option == '1':
+    print("Stack Empty" if isEmpty() else "Not Empty")
+  elif option == '2':
+    print("Stack will Overflow") if top == size else stack.append(int(input("Enter Element: ")))
+  elif option == '3':
+    if isEmpty():
+      print("Stack is Empty")
+    else:
+      del stack[-1]
+  elif option == '4':
+    print("Stack is Empty" if isEmpty() else stack[-1])
+  elif option == '5':
+    break
+  else:
+    print("Enter a number between 1 & 5")
+print("Stack:", stack)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int size, top = 0, element, option, i;
+
+  printf("Enter Stack Size: ");
+  scanf("%d", &size);
+
+  int stack[size];
+  while (1)
+  {
+    printf("\\n\\nStack:");
+    for (i = 0; i < top; i++)
+      printf(" %d", stack[i]);
+
+    printf("\\n\\nSelect Stack Operation\\n1. Is Empty?\\n2. Push\\n3. Pop\\n4. Top\\n5. Exit\\nEnter Option Number: ");
+    scanf("%d", &option);
+    printf("\\n");
+
+    if (option == 1)
+      printf(isEmpty(top)? "Stack Empty": "Not Empty\\n");
+    else if (option == 2)
+    {
+      if(top == size)
+        printf("Stack will Overflow\\n");
+      else
+      {
+        printf("Enter Element: ");
+        scanf("%d", &element);
+        stack[top++] = element;
+      }
+    }
+    else if (option == 3)
+    {
+      if (isEmpty(top))
+        printf("Stack is Empty\\n");
+      else
+        top--;
+    }
+    else if (option == 4)
+      printf(isEmpty(top)? "Stack is Empty\\n": "%d", stack[top - 1]);
+    else if (option == 5)
+      break;
+    else
+      printf("Enter a number between 1 & 5\\n");
+  }
+  printf("\\n\\nStack:");
+  for (i = 0; i < top; i++)
+    printf(" %d", stack[i]);
+}
+
+int isEmpty(top)
+{return top == 0? 1: 0;}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+
+int isEmpty(int top)
+{return top == 0? 1: 0;}
+
+int main()
+{
+  int size, top = 0, element, option, i;
+
+  cout << "Enter Stack Size: ";
+  cin >> size;
+
+  int stack[size];
+  while (1)
+  {
+    cout << "\\n\\nStack:";
+    for (i = 0; i < top; i++)
+      cout << " " << stack[i];
+
+    cout << "\\n\\nSelect Stack Operation\\n1. Is Empty?\\n2. Push\\n3. Pop\\n4. Top\\n5. Exit\\nEnter Option Number: ";
+    cin >> option;
+    cout << "\\n";
+
+    if (option == 1)
+      cout << (isEmpty(top)? "Stack Empty": "Not Empty\\n");
+    else if (option == 2)
+    {
+      if(top == size)
+        cout << "Stack will Overflow\\n";
+      else
+      {
+        cout << "Enter Element: ";
+        cin >> element;
+        stack[top++] = element;
+      }
+    }
+    else if (option == 3)
+    {
+      if (isEmpty(top))
+        cout << "Stack is Empty\\n";
+      else
+        top--;
+    }
+    else if (option == 4)
+    {
+      if (isEmpty(top))
+        cout << "Stack is Empty\\n";
+      else
+        cout << stack[top - 1];
+    }
+    else if (option == 5)
+      break;
+    else
+      cout << "Enter a number between 1 & 5\\n";
+  }
+  cout << "\\n\\nStack:";
+  for (i = 0; i < top; i++)
+    cout << " " << stack[i];
+}`,
+
+'java':
+`import java.util.Scanner;
+import java.util.Arrays;
+
+class StackDS
+{
+  public static boolean isEmpty(int top)
+  {return top == 0? true: false;}
+
+  public static void main(String[] args)
+  {
+    int size, top = 0, option, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Stack Size: ");
+    size = scanner.nextInt();
+
+    int[] stack = new int[size];
+    while (true)
+    {
+      int[] s = new int[top];
+      for (i = 0; i < top; i++)
+        s[i] = stack[i];
+      System.out.println("Stack: " + Arrays.toString(s));
+
+      System.out.println("\\nSelect Stack Operation\\n1. Is Empty?\\n2. Push\\n3. Pop\\n4. Top\\n5. Exit\\nEnter Option Number: ");
+      option = scanner.nextInt();
+      System.out.println();
+
+      if (option == 1)
+        System.out.println(isEmpty(top)? "Stack Empty": "Not Empty");
+      else if (option == 2)
+      {
+        if(top == size)
+          System.out.println("Stack will Overflow");
+        else
+        {
+          System.out.println("Enter Element:");
+          stack[top++] = scanner.nextInt();
+        }
+      }
+      else if (option == 3)
+      {
+        if (isEmpty(top))
+          System.out.println("Stack is Empty");
+        else
+          top--;
+      }
+      else if (option == 4)
+      {
+        if (isEmpty(top))
+          System.out.println("Stack is Empty");
+        else
+          System.out.println(stack[top - 1]);
+      }
+      else if (option == 5)
+        break;
+      else
+        System.out.println("Enter a number between 1 & 5");
+    }
+    int[] s = new int[top];
+    for (i = 0; i < top; i++)
+      s[i] = stack[i];
+    System.out.println("Stack: " + Arrays.toString(s));
+
+    scanner.close();
+  }
+}`
+},
+
+
+// "ds":
+// {
+// 'js':
+// ``,
+
+// 'py':
+// ``,
+
+// 'c':
+// ``,
+
+// 'cpp':
+// ``,
+
+// 'java':
+// ``
+// },
+
+
 "selection_sort":
 {
 'js':
