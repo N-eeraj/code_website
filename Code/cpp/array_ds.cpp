@@ -10,7 +10,7 @@ int main()
     {
         cout << "\nArray: ";
         for (i = 0; i < length; i++)
-            cout << arr[i] << " ";
+            cout << " " << arr[i];
 
         cout << "\n\nSelect Array Operation\n1. Traverse\n2. Insertion\n3. Deletion\n4. Updation\n5. Exit\nEnter Option Number: ";
         cin >> option;
@@ -62,7 +62,7 @@ int main()
         else if (option == 5)
             break;
         else
-            cout << "Enter a number between 1 & 4";
+            cout << "Enter a number between 1 & 5";
     }
     cout << "\nArray: ";
     for (i = 0; i < length; i++)

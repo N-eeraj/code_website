@@ -66,7 +66,7 @@ class ArrayDS
             else if (option == 5)
                 break;
             else
-                System.out.println("Enter a number between 1 & 4");
+                System.out.println("Enter a number between 1 & 5");
         }
         int[] a = new int[length];
         for (i = 0; i < length; i++)

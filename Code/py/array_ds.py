@@ -5,7 +5,7 @@ while 1:
     length = len(arr)
     
     option = int(input("\nSelect Array Operation\n1. Traverse\n2. Insertion\n3. Deletion\n4. Updation\n5. Exit\nEnter Option Number: "))
-    print("")
+    print()
 
     if option == 1:
         for i in arr:
@@ -28,5 +28,5 @@ while 1:
     elif option == 5:
         break
     else:
-        print("Enter a number between 1 & 4")
+        print("Enter a number between 1 & 5")
 print("Array:", arr)

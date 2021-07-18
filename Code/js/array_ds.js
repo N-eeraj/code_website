@@ -41,7 +41,7 @@ while (1)
     break;
   else
   {
-    console.log("Enter a number between 1 & 4");
+    console.log("Enter a number between 1 & 5");
     continue;
   }
 }

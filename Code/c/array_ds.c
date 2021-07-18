@@ -7,9 +7,9 @@ void main()
 
     while (1)
     {
-        printf("\nArray: ");
+        printf("\nArray:");
         for (i = 0; i < length; i++)
-            printf("%d ", arr[i]);
+            printf(" %d", arr[i]);
 
         printf("\n\nSelect Array Operation\n1. Traverse\n2. Insertion\n3. Deletion\n4. Updation\n5. Exit\nEnter Option Number: ");
         scanf("%d", &option);
@@ -61,7 +61,7 @@ void main()
         else if (option == 5)
             break;
         else
-            printf("Enter a number between 1 & 4");
+            printf("Enter a number between 1 & 5");
     }
     printf("\nArray: ");
     for (i = 0; i < length; i++)

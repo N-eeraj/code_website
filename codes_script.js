@@ -4511,7 +4511,7 @@ while (1)
     break;
   else
   {
-    console.log("Enter a number between 1 & 4");
+    console.log("Enter a number between 1 & 5");
     continue;
   }
 }
@@ -4526,7 +4526,7 @@ while 1:
   length = len(arr)
     
   option = int(input("\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: "))
-  print("")
+  print()
 
   if option == 1:
     for i in arr:
@@ -4549,7 +4549,7 @@ while 1:
   elif option == 5:
     break
   else:
-    print("Enter a number between 1 & 4")
+    print("Enter a number between 1 & 5")
 print("Array:", arr)`,
 
 'c':
@@ -4562,9 +4562,9 @@ void main()
 
   while (1)
   {
-    printf("\\nArray: ");
+    printf("\\nArray:");
     for (i = 0; i < length; i++)
-      printf("%d ", arr[i]);
+      printf(" %d", arr[i]);
 
     printf("\\n\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: ");
     scanf("%d", &option);
@@ -4616,7 +4616,7 @@ void main()
     else if (option == 5)
       break;
     else
-      printf("Enter a number between 1 & 4");
+      printf("Enter a number between 1 & 5");
   }
   printf("\\nArray: ");
   for (i = 0; i < length; i++)
@@ -4634,9 +4634,9 @@ int main()
 
   while (1)
   {
-    cout << "\\nArray: ";
+    cout << "\\nArray:";
     for (i = 0; i < length; i++)
-      cout << arr[i] << " ";
+      cout << " " << arr[i];
 
     cout << "\\n\\nSelect Array Operation\\n1. Traverse\\n2. Insertion\\n3. Deletion\\n4. Updation\\n5. Exit\\nEnter Option Number: ";
     cin >> option;
@@ -4688,7 +4688,7 @@ int main()
     else if (option == 5)
       break;
     else
-      cout << "Enter a number between 1 & 4";
+      cout << "Enter a number between 1 & 5";
   }
   cout << "\\nArray: ";
   for (i = 0; i < length; i++)
@@ -4765,7 +4765,7 @@ class ArrayDS
       else if (option == 5)
         break;
       else
-        System.out.println("Enter a number between 1 & 4");
+        System.out.println("Enter a number between 1 & 5");
     }
     int[] a = new int[length];
     for (i = 0; i < length; i++)
@@ -4773,6 +4773,289 @@ class ArrayDS
     System.out.println("Array: " + Arrays.toString(a));
 
     scanner.close();
+  }
+}`
+},
+
+
+"queue_ds":
+{
+'js':
+`function isEmpty()
+{return end == 0? true: false;}
+
+function isFull()
+{return end == size? true: false;}
+
+let queue = [];
+
+size = prompt("Enter Queue Size")
+
+while (true)
+{
+  console.log("Queue: " + queue);
+  end = queue.length
+
+  option = prompt("Select Queue Operation\\n1. Is Empty?\\n2. Is Full?\\n3. Enqueue\\n4. Dequeue\\n5. Exit\\nEnter Option Number");
+
+  if (option == 1)
+    console.log(isEmpty()? "Empty": "Not Empty");
+  else if (option == 2)
+    console.log(isFull()? "Full": "Not Full");
+  else if (option == 3)
+  {
+    if (isFull())
+      console.log("Can't Enqueue: Queue Full");
+    else
+      queue.push(prompt("Enter Element"));
+  }
+  else if (option == 4)
+  {
+    if (isEmpty())
+      console.log("Can't Dequeue: Queue Empty");
+    else
+      queue.shift();
+  }
+  else if (option == 5)
+    break;
+  else
+    console.log("Enter a number between 1 & 5");
+}
+console.log("Queue: " + queue);`,
+
+'py':
+`def isEmpty():
+return True if end == 0 else False
+
+def isFull():
+return True if end == size else False
+
+queue = []
+
+size = int(input("Enter Queue Size: "))
+
+while True:
+print("Queue:", queue)
+end = len(queue)
+
+option = input("\\nSelect Queue Operation\\n1. Is Empty?\\n2. Is Full?\\n3. Enqueue\\n4. Dequeue\\n5. Exit\\nEnter Option Number: ")
+print()
+
+if option == '1':
+  print("Empty" if isEmpty() else "Not Empty")
+elif option == '2':
+  print("Full" if isFull() else "Not Full")
+elif option == '3':
+  if isFull():
+    print("Can't Enqueue: Queue Full")
+  else:
+    queue.append(int(input("Enter Element: ")))
+elif option == '4':
+  if isEmpty():
+    print("Can't Dequeue: Queue Empty")
+  else:
+    del queue[0]
+elif option == '5':
+  break
+else:
+  print("Enter a number between 1 & 5")
+print("Queue:", queue)`,
+
+'c':
+`#include<stdio.h>
+void main()
+{
+  int size, end = 0, element, option, i;
+
+  printf("Enter Queue Size: ");
+  scanf("%d", &size);
+
+  int queue[size];
+  while (1)
+  {
+    printf("\\n\\nQueue:");
+    for (i = 0; i < end; i++)
+      printf(" %d", queue[i]);
+
+    printf("\\n\\nSelect Queue Operation\\n1. Is Empty?\\n2. Is Full?\\n3. Enqueue\\n4. Dequeue\\n5. Exit\\nEnter Option Number: ");
+    scanf("%d", &option);
+    printf("\\n");
+
+    if (option == 1)
+      printf(isEmpty(end)? "Empty": "Not Empty\\n");
+    else if (option == 2)
+      printf(isFull(end, size)? "Full": "Not Full\\n");
+    else if (option == 3)
+    {
+      if (isFull(end, size))
+        printf("Can't Enqueue: Queue Full\\n");
+      else
+      {
+        printf("Enter Element: ");
+        scanf("%d", &element);
+        queue[end++] = element;
+      }
+    }
+    else if (option == 4)
+    {
+      if (isEmpty(end))
+        printf("Can't Dequeue: Queue Empty\\n");
+      else
+      {
+        for (i = 1; i <= end; i++)
+          queue[i - 1] = queue[i];
+        end--;
+      }
+    }
+    else if (option == 5)
+      break;
+    else
+      printf("Enter a number between 1 & 5");
+  }
+  printf("\\n\\nQueue:");
+  for (i = 0; i < end; i++)
+    printf(" %d", queue[i]);
+}
+
+int isEmpty(end)
+{return end == 0? 1: 0;}
+
+int isFull(end, size)
+{return end == size? 1: 0;}`,
+
+'cpp':
+`#include<iostream>
+using namespace std;
+
+int isEmpty(int end)
+{return end == 0? 1: 0;}
+
+int isFull(int end, int size)
+{return end == size? 1: 0;}
+
+int main()
+{
+  int size, end = 0, element, option, i;
+
+  cout << "Enter Queue Size: ";
+  cin >>size;
+
+  int queue[size];
+  while (1)
+  {
+    cout << "\\n\\nQueue:";
+    for (i = 0; i < end; i++)
+      cout << " " << queue[i];
+
+    cout << "\\n\\nSelect Queue Operation\\n1. Is Empty?\\n2. Is Full?\\n3. Enqueue\\n4. Dequeue\\n5. Exit\\nEnter Option Number: ";
+    cin >> option;
+    cout << "\\n";
+
+    if (option == 1)
+      cout << (isEmpty(end)? "Empty": "Not Empty\\n");
+    else if (option == 2)
+      cout << (isFull(end, size)? "Full": "Not Full\\n");
+    else if (option == 3)
+    {
+      if (isFull(end, size))
+        cout << "Can't Enqueue: Queue Full\\n";
+      else
+      {
+        cout << "Enter Element: ";
+        cin >> element;
+        queue[end++] = element;
+      }
+    }
+    else if (option == 4)
+    {
+      if (isEmpty(end))
+        cout << "Can't Dequeue: Queue Empty\\n";
+      else
+      {
+        for (i = 1; i <= end; i++)
+          queue[i - 1] = queue[i];
+        end--;
+      }
+    }
+    else if (option == 5)
+      break;
+    else
+      cout << "Enter a number between 1 & 5";
+  }
+  cout << "\\n\\nQueue:";
+  for (i = 0; i < end; i++)
+    cout << " %d", queue[i];
+  return 0;
+}`,
+
+'java':
+`import java.util.Scanner;
+import java.util.Arrays;
+
+class QueueDS
+{
+  public static boolean isEmpty(int end)
+  {return end == 0? true: false;}
+
+  public static boolean isFull(int end, int size)
+  {return end == size? true: false;}
+
+  public static void main(String[] args)
+  {
+    int size, end = 0, option, i;
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter Queue Size: ");
+    size = scanner.nextInt();
+
+    int[] queue = new int[size];
+    while (true)
+    {
+      int[] q = new int[end];
+      for (i = 0; i < end; i++)
+        q[i] = queue[i];
+      System.out.println("Queue: " + Arrays.toString(q));
+
+      System.out.println("\\nSelect Queue Operation\\n1. Is Empty?\\n2. Is Full?\\n3. Enqueue\\n4. Dequeue\\n5. Exit\\nEnter Option Number: ");
+      option = scanner.nextInt();
+      System.out.println();
+
+      if (option == 1)
+        System.out.println(isEmpty(end)? "Empty": "Not Empty");
+      else if (option == 2)
+        System.out.println(isFull(end, size)? "Full": "Not Full");
+      else if (option == 3)
+      {
+        if (isFull(end, size))
+          System.out.println("Can't Enqueue: Queue Full");
+        else
+        {
+          System.out.println("Enter Element:");
+          queue[end++] = scanner.nextInt();
+        }
+      }
+      else if (option == 4)
+      {
+        if (isEmpty(end))
+          System.out.println("Can't Dequeue: Queue Empty");
+        else
+        {
+          for (i = 1; i < end; i++)
+            queue[i - 1] = queue[i];
+          end--;
+        }
+      }
+      else if (option == 5)
+        break;
+      else
+        System.out.println("Enter a number between 1 & 5");
+      }
+      int[] q = new int[end];
+      for (i = 0; i < end; i++)
+        q[i] = queue[i];
+      System.out.println("Queue: " + Arrays.toString(q));
+
+      scanner.close();
   }
 }`
 },
